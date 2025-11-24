@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import { Container, Row, Col } from "react-bootstrap";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";
 import ContactImg from "../../assets/images/contact2.jpg";
+
 const ContactForm = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_bb78gun",
+        "template_od67zp7",
+        form.current,
+        "Oiapianp1vSU6FZP_"
+      )
+      .then(
+        (result) => {
+          alert("Message Sent Successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("Failed! Please try again.");
+        }
+      );
+  };
+
   return (
     <section className="contactform">
       <Container>
@@ -18,7 +43,8 @@ const ContactForm = () => {
                 anything else — just reach out and we'll get back to you as soon
                 as possible.
               </p>
-              <form>
+
+              <form ref={form} onSubmit={sendEmail}>
                 <Row>
                   <Col md={6}>
                     <div className="form-group">
@@ -27,8 +53,9 @@ const ContactForm = () => {
                         type="text"
                         className="form-control"
                         id="name"
-                        name="name"
+                        name="user_name"
                         placeholder="Enter your name"
+                        required
                       />
                     </div>
                   </Col>
@@ -40,11 +67,13 @@ const ContactForm = () => {
                         type="tel"
                         className="form-control"
                         id="phone"
-                        name="phone"
+                        name="user_phone"
                         placeholder="Enter your phone"
+                        required
                       />
                     </div>
                   </Col>
+
                   <Col md={12}>
                     <div className="form-group">
                       <label htmlFor="email">Email</label>
@@ -52,8 +81,9 @@ const ContactForm = () => {
                         type="email"
                         className="form-control"
                         id="email"
-                        name="email"
+                        name="user_email"
                         placeholder="Enter your email"
+                        required
                       />
                     </div>
                   </Col>
@@ -64,12 +94,14 @@ const ContactForm = () => {
                       <textarea
                         className="form-control"
                         id="message"
-                        name="message"
+                        name="user_message"
                         placeholder="Enter your message"
                         rows="5"
+                        required
                       ></textarea>
                     </div>
                   </Col>
+
                   <Col md={4} sm={5} xs={6}>
                     <button type="submit" className="submit-btn">
                       Send Message
@@ -79,6 +111,8 @@ const ContactForm = () => {
               </form>
             </div>
           </Col>
+
+          {/* Right Section remains the same */}
           <Col lg={6}>
             <div className="contactform-right">
               <div className="person-img">
@@ -109,13 +143,21 @@ const ContactForm = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://maps.app.goo.gl/BN8aBBGq3RfaYRzg8" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://maps.app.goo.gl/BN8aBBGq3RfaYRzg8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span className="contact-list-icon">
                         <IoLocationOutline />
                       </span>
                       <div className="contact-list-text">
                         <h5>Address</h5>
-                        <p>Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC,<br /> Ahmedabad, Gujarat 382445</p>
+                        <p>
+                          Shree Hari Darshan Industrial Park Rd, Phase IV,
+                          Vatva GIDC,<br />
+                          Ahmedabad, Gujarat 382445
+                        </p>
                       </div>
                     </a>
                   </li>

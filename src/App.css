@@ -375,7 +375,6 @@ footer {
   color: var(--text-gray);
   padding: 10px 15px;
   background-color: var(--color-white);
-  text-transform: capitalize;
 }
 
 .contactform-left form .form-control:focus,

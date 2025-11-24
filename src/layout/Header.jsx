@@ -44,7 +44,7 @@ const Header = () => {
             </Offcanvas.Header>
 
             <Offcanvas.Body>
-              <Nav className="justify-content-center flex-grow-1 pe-3">
+              <Nav className="justify-content-end flex-grow-1 pe-3">
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
@@ -102,7 +102,7 @@ const Header = () => {
                   Contact
                 </NavLink>
               </Nav>
-              <div className="sign-in">
+              {/* <div className="sign-in">
                 <NavDropdown
                   title={
                     <div className="sign-info">
@@ -117,7 +117,7 @@ const Header = () => {
                     Logout
                   </NavDropdown.Item>
                 </NavDropdown>
-              </div>
+              </div> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Navbar>
