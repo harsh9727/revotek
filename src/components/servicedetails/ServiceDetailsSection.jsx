@@ -3,12 +3,12 @@ import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 // Import your images
-import InstallImage from "../../assets/images/installation.jpg";
-import MaintenanceImage from "../../assets/images/maintanence.jpg";
+import InstallImage from "../../assets/images/install-details-2.jpg";
+import MaintenanceImage from "../../assets/images/maintanance-details.jpg";
 import RepairImage from "../../assets/images/repairingservice.jpeg";
-import ModernizationImage from "../../assets/images/morderize.jpg";
-import AMCImage from "../../assets/images/annualcontact.jpg";
-import SparePartsImage from "../../assets/images/sparepartssupply.jpg";
+import ModernizationImage from "../../assets/images/mordenize-details.jpg";
+import AMCImage from "../../assets/images/contract-details.jpg";
+import SparePartsImage from "../../assets/images/spare-parts-details.jpg";
 
 const ServiceDetailsSection = () => {
   const { id } = useParams();

@@ -1,0 +1,115 @@
+/*header*/
+@media (max-width: 991px) {
+  .navbar-toggler {
+    padding: 5px;
+  }
+  .navbar-toggler:hover,
+  .navbar-toggler:focus,
+  .navbar-toggler:focus-visible {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+  .offcanvas {
+    width: 300px !important;
+  }
+}
+/*banner*/
+@media (max-width: 767px) {
+  .comman-banner .commanbanner-content h3 {
+    font-size: 36px;
+  }
+}
+/*footer*/
+@media (max-width: 1199px) {
+  .footer-contact ul li a.map svg {
+    font-size: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .footer-contact {
+    padding-left: 0px;
+  }
+  .footer-map {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-contact {
+    margin: 30px 0 0;
+  }
+  .footer-contact ul li a.map svg {
+    font-size: 30px;
+  }
+  .copyright-text {
+    flex-direction: column-reverse;
+  }
+  .copyright-text p {
+    margin-top: 7px;
+  }
+}
+/*contact*/
+
+@media (max-width: 991px) {
+  .contactform > .container > .row {
+    flex-direction: column-reverse;
+  }
+  .contactform-left {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 399px) {
+  .contactform-right .contact-list ul li a {
+    flex-direction: column;
+  }
+  .contactform-right .contact-list ul li a .contact-list-icon {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .contact-list-text {
+    text-align: center;
+  }
+  .contactform-right .contact-list ul li a .contact-list-text h5 {
+    margin-bottom: 5px;
+  }
+  .contactform-left h3 {
+    font-size: 30px;
+  }
+}
+
+/*service card */
+@media (max-width: 1199px) {
+  .servicecard {
+    padding: 20px;
+  }
+  .servicecard-section .servicecard-icon {
+    height: 210px;
+  }
+  .servicecard-section .servicecard h3 {
+    min-height: 55px;
+  }
+}
+@media (max-width: 991px) {
+  .servicecard-section {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 767px) {
+  .servicecard-section .servicecard-icon {
+    height: 170px;
+  }
+  .contact-btn span {
+    font-size: 16px;
+  }
+  .servicecard-section .servicecard p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media(max-width:575px){
+.servicecard-section .servicecard h3{
+  min-height: auto;
+}
+}

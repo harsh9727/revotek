@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import TestimonialImg from "../../assets/images/morderize.jpg";
-import TestimonialRightImg from "../../assets/images/maintanence.jpg";
+import TestimonialRightImg from "../../assets/images/building.jpg";
 import Quotes from "../../assets/images/qoute.svg";
 import Slider from "react-slick";
 import { FaStar } from "react-icons/fa";

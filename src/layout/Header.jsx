@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  Offcanvas,
-  NavDropdown,
-} from "react-bootstrap";
+import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import logo from "../assets/images/logo.png";
-import { MdLogout } from "react-icons/md";
-import { FaRegUserCircle } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -25,7 +18,8 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
   return (
     <div className={`comman-header ${isSticky ? "is-sticky" : ""}`}>
       <Container>
@@ -33,11 +27,12 @@ const Header = () => {
           <Navbar.Brand href="/">
             <img src={logo} alt="Logo" className="logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" />
+          <Navbar.Toggle aria-controls="offcanvasNavbar"  onClick={handleShow} />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            placement="start"
+            placement="end"
+            show={showOffcanvas}
+            onHide={handleClose}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
@@ -50,25 +45,27 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
+                   onClick={handleClose}
                 >
-                  Home
+                  About Us
                 </NavLink>
 
-                <NavLink
+                {/* <NavLink
                   to="/about"
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
                 >
-                  About
-                </NavLink>
+                  About Us
+                </NavLink> */}
                 <NavLink
                   to="/services"
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
+                   onClick={handleClose}
                 >
-                 Services
+                  Services
                 </NavLink>
 
                 {/* <NavDropdown title="Services" id="services-dropdown">
@@ -98,8 +95,9 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
+                   onClick={handleClose}
                 >
-                  Contact
+                  Contact Us
                 </NavLink>
               </Nav>
               {/* <div className="sign-in">

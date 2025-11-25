@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import TeamImg1 from "../../assets/images/teamperson1.jpg";
+import TeamImg1 from "../../assets/images/user.jpg";
 import { IoCallSharp } from "react-icons/io5";
 const Team = () => {
   return (
@@ -20,6 +20,7 @@ const Team = () => {
             <div className="teams-card">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
+                
               </div>
               <div className="teamperson-content">
                 <div className="teamperson-info">

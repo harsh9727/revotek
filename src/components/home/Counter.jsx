@@ -21,7 +21,7 @@ const Counter = () => {
             <Container>
                 <Row className="text-center">
                     {counterData.map((item, index) => (
-                        <Col md={4} key={index}>
+                        <Col md={4} key={index} data-aos="fade-up">
                             <div className="counter-content">
                                 <h3 className="counter-number">
                                     {inView ? (

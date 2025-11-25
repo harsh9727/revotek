@@ -19,12 +19,13 @@ const Footer = () => {
       <div className="main-footer">
         <Container>
           <Row>
-            <Col lg={4} md={6} sm={6}>
+            <Col lg={4} md={6} sm={12}>
               <div className="footer-content">
                 <img src={Logo} alt="footer-logo" loading="lazy" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Your trusted partner for elevator installation, maintenance,
+                  repair, and modernization — delivering safe, smooth, and
+                  efficient vertical mobility solutions.
                 </p>
                 <ul>
                   <li>
@@ -38,14 +39,23 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://wa.me/+919265999898" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://wa.me/+919265999898"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <FaWhatsapp />
                     </a>
                   </li>
                 </ul>
               </div>
             </Col>
-            <Col lg={4} md={6} sm={6}>
+            <Col
+              lg={4}
+              md={12}
+              sm={{ span: 12, order: 3 }}
+              xs={{ span: 12, order: 3 }}
+            >
               <div className="footer-map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.5364399611703!2d72.64495699999999!3d22.976447500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8942442fd955%3A0xb68dd4e3bba0491d!2sShree%20Hari%20Industrial%20Park!5e1!3m2!1sen!2sin!4v1761975771820!5m2!1sen!2sin"
@@ -57,25 +67,33 @@ const Footer = () => {
                 ></iframe>
               </div>
             </Col>
-            <Col lg={4} md={6} sm={6}>
+            <Col lg={4} md={6} sm={12}>
               <div className="footer-contact">
                 <h3>Support</h3>
                 <ul>
                   <li>
-                    <a href="https://maps.app.goo.gl/BN8aBBGq3RfaYRzg8" target="_blank" rel="noopener noreferrer" >
-                      <SlLocationPin style={{width:"30px"}} />
-                      <span>Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC, Ahmedabad, Gujarat 382445</span>
+                    <a
+                      href="https://maps.app.goo.gl/BN8aBBGq3RfaYRzg8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="map"
+                    >
+                      <SlLocationPin  />
+                      <span>
+                        Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva
+                        GIDC, Ahmedabad, Gujarat 382445
+                      </span>
                     </a>
                   </li>
 
                   <li>
-                    <a href="tel:+919265999898" >
+                    <a href="tel:+919265999898">
                       <IoCallOutline />
                       <span>+91 92659 99898</span>
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:revotekservices@gmail.com" >
+                    <a href="mailto:revotekservices@gmail.com">
                       <IoMailOpenOutline />
                       <span>revotekservices@gmail.com</span>
                     </a>
@@ -92,16 +110,21 @@ const Footer = () => {
             <p>
               © 2025, All rights reserved by <span>Revotek</span>
             </p>
-          <ul className="quick-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/terms">Terms & Conditions</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-          </ul>
+            <ul className="quick-links">
+              <li>
+                <a href="/">About Us</a>
+              </li>
+              {/* <li>
+                <a href="/about">About</a>
+              </li> */}
+              <li>
+                <a href="/services">Services</a>
+              </li>
+              <li>
+                <a href="/contact">Contact Us</a>
+              </li>
+            </ul>
           </div>
-
         </Container>
       </div>
       <button className="up-icon" onClick={scrollToTop}>

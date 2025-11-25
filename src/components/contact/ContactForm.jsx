@@ -35,16 +35,16 @@ const ContactForm = () => {
       <Container>
         <Row>
           <Col lg={6}>
-            <div className="contactform-left">
-              <h5>Get In Touch</h5>
-              <h3>We’re here to help!</h3>
-              <p>
+            <div className="contactform-left" data-aos="fade-right">
+              <h5 data-aos="fade-down">Get In Touch</h5>
+              <h3 data-aos="fade-down">We’re here to help!</h3>
+              <p data-aos="fade-down">
                 If you have any questions about your order, products, or
                 anything else — just reach out and we'll get back to you as soon
                 as possible.
               </p>
 
-              <form ref={form} onSubmit={sendEmail}>
+              <form ref={form} onSubmit={sendEmail} data-aos="fade-up">
                 <Row>
                   <Col md={6}>
                     <div className="form-group">
@@ -102,7 +102,7 @@ const ContactForm = () => {
                     </div>
                   </Col>
 
-                  <Col md={4} sm={5} xs={6}>
+                  <Col md={4} sm={5} xs={8}>
                     <button type="submit" className="submit-btn">
                       Send Message
                     </button>
@@ -116,11 +116,11 @@ const ContactForm = () => {
           <Col lg={6}>
             <div className="contactform-right">
               <div className="person-img">
-                <img src={ContactImg} alt="person" loading="lazy" />
+                <img src={ContactImg} alt="person" loading="lazy" data-aos="fade-left" />
               </div>
               <div className="contact-list">
                 <ul>
-                  <li>
+                  <li data-aos="fade-up">
                     <a href="tel:+919265999898">
                       <span className="contact-list-icon">
                         <FiPhoneCall />
@@ -131,7 +131,7 @@ const ContactForm = () => {
                       </div>
                     </a>
                   </li>
-                  <li>
+                  <li data-aos="fade-up">
                     <a href="mailto:revotekservices@gmail.com">
                       <span className="contact-list-icon">
                         <LuMail />
@@ -142,7 +142,7 @@ const ContactForm = () => {
                       </div>
                     </a>
                   </li>
-                  <li>
+                  <li data-aos="fade-up">
                     <a
                       href="https://maps.app.goo.gl/BN8aBBGq3RfaYRzg8"
                       target="_blank"

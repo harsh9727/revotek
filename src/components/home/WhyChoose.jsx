@@ -1,18 +1,18 @@
 import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
-import WhyChooseImg from "../../assets/images/why-choose-2.jpg";
+import WhyChooseImg from "../../assets/images/why-choose.jpg";
 
 const WhyChoose = () => {
   return (
     <section className="why-choose">
       <div className="left-img">
-        <img src={WhyChooseImg} alt="img" />
+        <img src={WhyChooseImg} alt="img" data-aos="fade-right" />
       </div>
       <Container>
         <Row>
           <Col lg={{ span: 8, offset: 4 }}>
             <div className="why-choose-content">
-              <div className="about-content">
+              <div className="about-content" data-aos="fade-left">
                 <h5 className="sub-title">Why Choose Us</h5>
                 <h3 className="title">
                   Your Trusted Partner in Elevator Excellence
@@ -24,7 +24,7 @@ const WhyChoose = () => {
                 </p>
               </div>
               <ul className="why-choose-list">
-                <li className="why-choose-wrap">
+                <li className="why-choose-wrap" data-aos="fade-up">
                   <div className="number">01</div>
                   <div className="why-choose-details">
                     <h4 className="title">
@@ -38,7 +38,7 @@ const WhyChoose = () => {
                     </p>
                   </div>
                 </li>
-                <li className="why-choose-wrap">
+                <li className="why-choose-wrap" data-aos="fade-up">
                   <div className="number">02</div>
                   <div className="why-choose-details">
                     <h4 className="title">Quick Response & 24/7 Support</h4>
@@ -50,7 +50,7 @@ const WhyChoose = () => {
                     </p>
                   </div>
                 </li>
-                <li className="why-choose-wrap">
+                <li className="why-choose-wrap" data-aos="fade-up">
                   <div className="number">03</div>
                   <div className="why-choose-details">
                     <h4 className="title">High-Quality Workmanship</h4>
@@ -61,7 +61,7 @@ const WhyChoose = () => {
                     </p>
                   </div>
                 </li>
-                <li className="why-choose-wrap">
+                <li className="why-choose-wrap" data-aos="fade-up">
                   <div className="number">04</div>
                   <div className="why-choose-details">
                     <h4 className="title">Complete Elevator Solutions</h4>
