@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -15,22 +15,32 @@ import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import HomepageHeader from "./layout/HomepageHeader";
+import ScrollToTop from "./components/comman/ScrollToTop";
+import Loader from "./components/comman/Loader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './App.css';
 import './assets/css/responsive.css';
 
 function App() {
+    const [loading, setLoading] = useState(true);
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      // once: true,     
+      once: true,     
       offset: 100,    
     });
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
+    if (loading) {
+    return <Loader />;   
+  }
   return (
     <div className="App">
      <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

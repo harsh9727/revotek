@@ -1412,6 +1412,12 @@ footer {
   color: var(--color-black);
   margin: 0 15px;
 }
+.offcanvas-body .nav-link {
+  color: var(--color-black);
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 .dropdown-toggle::after {
   border: none;
   content: "\F282";
@@ -1469,21 +1475,16 @@ footer {
 }
 .comman-header .nav-link:hover,
 .comman-header .nav-link:focus,
-.comman-header .nav-link:active {
+.comman-header .nav-link:active, .comman-header .nav-link.active {
   color: var(--color-blue);
-  font-size: 700;
+  font-size: 700 !important;
 }
-.offcanvas-body .nav-link {
-  color: var(--color-black);
-  font-size: 18px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
+
 .offcanvas-body .nav-link:hover,
 .offcanvas-body .nav-link:focus,
-.offcanvas-body .nav-link:active {
+.offcanvas-body .nav-link:active, .offcanvas-body .nav-link.active {
   color: var(--color-blue);
-  font-size: 700;
+  font-size: 700 !important;
   transition: all 0.3s ease;
 }
 .comman-header.is-sticky {

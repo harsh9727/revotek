@@ -27,7 +27,7 @@ const Header = () => {
           <Navbar.Brand href="/">
             <img src={logo} alt="Logo" className="logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar"  onClick={handleShow} />
+          <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             placement="end"
@@ -42,10 +42,11 @@ const Header = () => {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <NavLink
                   to="/"
+                  end
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                   onClick={handleClose}
+                  onClick={handleClose}
                 >
                   About Us
                 </NavLink>
@@ -63,7 +64,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                   onClick={handleClose}
+                  onClick={handleClose}
                 >
                   Services
                 </NavLink>
@@ -95,7 +96,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                   onClick={handleClose}
+                  onClick={handleClose}
                 >
                   Contact Us
                 </NavLink>
