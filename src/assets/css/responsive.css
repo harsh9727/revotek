@@ -188,6 +188,9 @@
   .homeabout {
     padding: 70px 0;
   }
+.comman-banner img{
+  object-position: center;
+}
 }
 @media (max-width: 767px) {
   .service-btn {
@@ -237,6 +240,10 @@
   .up-icon {
     bottom: 65px;
   }
+  .comman-banner img {
+    object-position: right;
+  }
+
 }
 @media (max-width: 575px) {
   .why-choose-list {
@@ -275,5 +282,37 @@
   }
   .homeabout .about-imgs .main-img {
     width: 95%;
+  }
+
+}
+
+@media(max-width:1199px){
+.service-details-content .serviceimg{
+  height: 450px;
+}
+}
+@media(max-width:991px){
+.service-details-content .serviceimg{
+  height: 400px;
+}
+}
+@media(max-width:575px){
+.service-details-content .serviceimg{
+  height: 350px;
+}
+}
+/*comman banner*/
+@media(max-width:767px){
+  .comman-banner .commanbanner-content{
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .comman-banner .commanbanner-content .breadcrumb {
+    margin: 0 auto;
+}
+}
+@media(max-width:575px){
+  .comman-banner .commanbanner-content .breadcrumb{
+    display: none;
   }
 }
