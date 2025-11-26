@@ -5,9 +5,9 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const counterData = [
-    { number: 19, suffix: "K", text: "Years Of Experience" },
-    { number: 19, suffix: "K", text: "Successful Projects" },
-    { number: 19, suffix: "K", text: "Satisfied Customers" },
+    { number: 10, text: "Years Of Experience" },
+    { number: 560, text: "Successful Projects" },
+    { number: 550, text: "Satisfied Customers" },
 ];
 
 const Counter = () => {
@@ -21,7 +21,7 @@ const Counter = () => {
             <Container>
                 <Row className="text-center">
                     {counterData.map((item, index) => (
-                        <Col md={4} key={index} data-aos="fade-up">
+                        <Col sm={4}  key={index} data-aos="fade-up">
                             <div className="counter-content">
                                 <h3 className="counter-number">
                                     {inView ? (

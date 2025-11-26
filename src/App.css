@@ -108,6 +108,7 @@ ul li {
 /*footer*/
 footer {
   padding: 50px 0 0;
+  overflow: hidden;
   background-color: var(--color-black);
 }
 
@@ -724,6 +725,7 @@ footer {
 .service-details-section {
   padding: 80px 0;
   background-color: var(--color-gray);
+  overflow: hidden;
 }
 
 .service-details-content .serviceimg {
@@ -815,8 +817,8 @@ footer {
 }
 .counter-text {
   font-size: 18px;
-  font-weight: 500;
-  color: var(--color-dark);
+  font-weight: 600;
+  color: var(--color-blue);
   margin: 0;
 }
 /*home about*/
@@ -906,6 +908,8 @@ footer {
   font-family: "bootstrap-icons";
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--color-blue);
   font-weight: 500;
   font-size: 20px;
@@ -936,7 +940,6 @@ footer {
   width: 100%;
   height: 100%;
   transform: scale(1);
-
 }
 .service-img:hover img {
   transform: scale(1.05);
@@ -1048,7 +1051,6 @@ footer {
   display: inline-block;
   text-align: center;
   background: var(--color-white);
-  
 }
 .why-choose-list .why-choose-wrap .why-choose-details .title {
   font-size: 22px;
@@ -1058,6 +1060,11 @@ footer {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 20px;
   margin-bottom: 20px;
+}
+.why-choose-details .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-gray);
 }
 .left-img {
   width: 30%;
@@ -1496,24 +1503,24 @@ footer {
     transform: translateY(0);
   }
 }
-.slick-dots li button:before{
+.slick-dots li button:before {
   height: 5px;
   border-radius: 5px;
   opacity: 1;
-  content:"";
+  content: "";
   background-color: var(--text-gray);
 }
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
   background-color: var(--color-blue);
 }
 .service-slider .servicecard:hover .servicecard-icon {
   background-color: var(--color-blue);
   transition: all 0.3s ease;
 }
-.service-slider .servicecard:hover .servicecard-icon img{
+.service-slider .servicecard:hover .servicecard-icon img {
   filter: brightness(0) invert(1);
 }
-.why-choose-wrap:hover .number{
+.why-choose-wrap:hover .number {
   background-color: var(--color-blue);
   color: var(--color-white);
   transition: all 0.3s ease;

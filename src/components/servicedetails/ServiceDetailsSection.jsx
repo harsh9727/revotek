@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 // Import your images
 import InstallImage from "../../assets/images/install-details-2.jpg";
 import MaintenanceImage from "../../assets/images/maintanance-details.jpg";
-import RepairImage from "../../assets/images/repairingservice.jpeg";
+import RepairImage from "../../assets/images/repairingservice.jpg";
 import ModernizationImage from "../../assets/images/mordenize-details.jpg";
 import AMCImage from "../../assets/images/contract-details.jpg";
 import SparePartsImage from "../../assets/images/spare-parts-details.jpg";
@@ -179,31 +179,31 @@ const ServiceDetailsSection = () => {
   if (!service) return <h3 className="text-center py-5">Service not found</h3>;
 
   return (
-    <section className="service-details-section py-5">
+    <section className="service-details-section">
       <Container>
         <div className="service-details-content">
-          <img src={service.image} alt={service.title} className="serviceimg" />
-          <h3>{service.title}</h3>
-          <p>{service.description}</p>
+          <img src={service.image} alt={service.title} className="serviceimg" data-aos="flip-left" />
+          <h3 data-aos="fade-right">{service.title}</h3>
+          <p data-aos="fade-left">{service.description}</p>
 
-          <h5>Process</h5>
+          <h5 data-aos="fade-right">Process</h5>
           <ul>
             {service.process.map((step, index) => (
-              <li key={index}>{step}</li>
+              <li key={index} data-aos="fade-up">{step}</li>
             ))}
           </ul>
 
-          <h5>Key Features</h5>
+          <h5 data-aos="fade-right">Key Features</h5>
           <ul className="points">
             {service.features.map((feature, index) => (
-              <li key={index}>{feature}</li>
+              <li key={index} data-aos="fade-up">{feature}</li>
             ))}
           </ul>
 
-          <h5>Benefits</h5>
+          <h5 data-aos="fade-right">Benefits</h5>
           <ul className="points">
             {service.benefits.map((benefit, index) => (
-              <li key={index}>{benefit}</li>
+              <li key={index} data-aos="fade-up">{benefit}</li>
             ))}
           </ul>
         </div>

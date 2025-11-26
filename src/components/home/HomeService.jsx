@@ -27,14 +27,28 @@ const HomeService = () => {
     autoplay: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1199,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 575,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -91,7 +105,7 @@ const HomeService = () => {
     <section className="home-service">
       <Container>
         <Row className="align-items-center">
-          <Col md={6} lg={7}>
+          <Col md={9} lg={7}>
             <div className="service-header" data-aos="fade-right">
               <div className="about-content">
                 <h5 className="sub-title">Our Services</h5>
@@ -101,7 +115,7 @@ const HomeService = () => {
               </div>
             </div>
           </Col>
-          <Col md={6} lg={5}>
+          <Col md={3} lg={5}>
             <div className="service-btn" data-aos="fade-left">
               <Link to="/services" className="contact-btn">
                 <span> All Services </span>{" "}
