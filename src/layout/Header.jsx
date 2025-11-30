@@ -7,46 +7,27 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
 
-  const [isSticky, setIsSticky] = useState(false);
-  const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
-  const handleClose = () => setShowOffcanvas(false);
-  const handleShow = () => setShowOffcanvas(true);
-
-  // Scroll to About section from anywhere
   const goToAbout = () => {
     navigate("/", { state: { scrollTo: "about" } });
-    setActiveSection("about");
     handleClose();
   };
-
-  // Sticky Header
+  const [isSticky, setIsSticky] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Track active section (Home / About)
-  useEffect(() => {
-    const handleScrollSection = () => {
-      const aboutSection = document.getElementById("about");
-      const scrollPosition = window.scrollY + 200;
-
-      if (aboutSection && scrollPosition >= aboutSection.offsetTop) {
-        setActiveSection("about");
+      if (window.scrollY > 50) {
+        setIsSticky(true);
       } else {
-        setActiveSection("home");
+        setIsSticky(false);
       }
     };
 
-    window.addEventListener("scroll", handleScrollSection);
-    return () => window.removeEventListener("scroll", handleScrollSection);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
   return (
     <div className={`comman-header ${isSticky ? "is-sticky" : ""}`}>
       <Container>
@@ -54,9 +35,7 @@ const Header = () => {
           <Navbar.Brand href="/">
             <img src={logo} alt="Logo" className="logo" />
           </Navbar.Brand>
-
           <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
-
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             placement="end"
@@ -69,20 +48,19 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-
-                <Nav.Link
-                  className={activeSection === "home" ? "nav-link active" : "nav-link"}
-                  onClick={() => {
-                    navigate("/");
-                    setActiveSection("home");
-                    handleClose();
-                  }}
+                <NavLink
+                  to="/"
+                  end
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                  onClick={handleClose}
                 >
                   Home
-                </Nav.Link>
+                </NavLink>
 
                 <Nav.Link
-                  className={activeSection === "about" ? "nav-link active" : "nav-link"}
+                  className="nav-link"
                   onClick={goToAbout}
                 >
                   About Us
@@ -93,29 +71,59 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                  onClick={() => {
-                    setActiveSection("");
-                    handleClose();
-                  }}
+                  onClick={handleClose}
                 >
                   Our Services
                 </NavLink>
+
+                {/* <NavDropdown title="Services" id="services-dropdown">
+                  <NavDropdown.Item as={NavLink} to="/services/maintenance">
+                    Elevator Maintenance
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/repair">
+                    Elevator Repair
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/installation">
+                    Elevator Installation
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/mordernization">
+                    Elevator Modernization
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/annualmaintenance">
+                    Elevator Annual Maintenance Contract
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/spareparts">
+                    Elevator Spare Parts Supply
+                  </NavDropdown.Item>
+
+                </NavDropdown> */}
 
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                  onClick={() => {
-                    setActiveSection("");
-                    handleClose();
-                  }}
+                  onClick={handleClose}
                 >
                   Contact Us
                 </NavLink>
-
-
               </Nav>
+              {/* <div className="sign-in">
+                <NavDropdown
+                  title={
+                    <div className="sign-info">
+                      <FaRegUserCircle />
+                      <span> Log In</span>
+                    </div>
+                  }
+                  id="services-dropdown"
+                >
+                  <NavDropdown.Item href="/logout">
+                    <MdLogout />
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </div> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Navbar>
