@@ -7,10 +7,24 @@ import WhyChoose from "../components/home/WhyChoose";
 import VisionMission from "../components/home/VisionMission";
 import Team from "../components/home/Team";
 import TestimonialSection from "../components/home/TestimonialSection";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 // import Testimonial from "../components/home/Testimonial";
 // import Advertisement from "../components/home/Advertisement";
 
 const Home = () => {
+     const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "about") {
+      const section = document.getElementById("about");
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth" });
+        }, 200);
+      }
+    }
+  }, [location]);
     return (
         <div>
             <Banner />

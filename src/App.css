@@ -1313,13 +1313,13 @@ footer {
   margin-right: 10px;
 }
 .homebanner-content .title {
-  font-size: 60px;
+  font-size: 52px;
   font-weight: 700;
   color: var(--color-blue);
   margin-bottom: 20px;
 }
 .homebanner-content .title span {
-  line-height: 68px;
+  line-height: 62px;
 }
 .homebanner-content .description {
   font-size: 18px;
@@ -1351,7 +1351,7 @@ footer {
 
 .rotating-text {
   position: relative;
-  height: 130px;
+  height: 120px;
   overflow: hidden;
 }
 

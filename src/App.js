@@ -15,6 +15,8 @@ import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import HomepageHeader from "./layout/HomepageHeader";
 import Loader from "./components/comman/Loader";
+import ScrollToTop from "./components/comman/ScrollToTop";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './App.css';
@@ -38,6 +40,7 @@ function App() {
   return (
     <div className="App">
      <Header />
+     <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

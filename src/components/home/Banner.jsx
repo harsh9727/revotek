@@ -20,7 +20,7 @@ const Banner = () => {
             <span>Your Trusted Partner in Elevator Service & Maintenance</span>
             <span>Modern Elevators Built for Performance & Comfort</span>
           </h1>
-          <p className="description" data-aos="fade-up">
+          <p className="description">
             We design, install, and maintain elevators built for long-term
             performance. Our skilled technicians ensure seamless mobility and
             modern safety standards. Perfect for residential, commercial, and

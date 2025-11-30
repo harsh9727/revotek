@@ -5,7 +5,7 @@ import aboutImg2 from "../../assets/images/about-main.jpg";
 import aboutImg3 from "../../assets/images/about-3.jpg";
 const HomeAbout = () => {
   return (
-    <section className="homeabout">
+    <section className="homeabout" id="about">
       <Container>
         <Row className="align-items-center">
           <Col lg={6}>

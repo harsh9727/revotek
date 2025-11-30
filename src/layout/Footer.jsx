@@ -7,6 +7,8 @@ import { SlLocationPin } from "react-icons/sl";
 import { IoArrowUp, IoCallOutline } from "react-icons/io5";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -50,7 +52,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-           
+
             <Col lg={4} md={6} sm={12}>
               <div className="footer-contact">
                 <h3>Support</h3>
@@ -62,7 +64,7 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="map"
                     >
-                      <SlLocationPin  />
+                      <SlLocationPin />
                       <span>
                         Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva
                         GIDC, Ahmedabad, Gujarat 382445
@@ -85,7 +87,7 @@ const Footer = () => {
                 </ul>
               </div>
             </Col>
-             <Col
+            <Col
               lg={4}
               md={12}
             >
@@ -114,7 +116,7 @@ const Footer = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/#about">About Us</a>
+                <HashLink smooth to="/#about">About Us</HashLink>
               </li>
               <li>
                 <a href="/services">Our Services</a>
