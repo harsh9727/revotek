@@ -48,17 +48,17 @@ const Header = () => {
                   }
                   onClick={handleClose}
                 >
-                  About Us
+                  Home
                 </NavLink>
 
-                {/* <NavLink
-                  to="/about"
+                <NavLink
+                  to="/#about"
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
                 >
                   About Us
-                </NavLink> */}
+                </NavLink>
                 <NavLink
                   to="/services"
                   className={({ isActive }) =>
@@ -66,7 +66,7 @@ const Header = () => {
                   }
                   onClick={handleClose}
                 >
-                  Services
+                  Our Services
                 </NavLink>
 
                 {/* <NavDropdown title="Services" id="services-dropdown">

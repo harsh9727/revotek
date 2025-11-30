@@ -5,7 +5,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
 import Terms from "./pages/Terms";
@@ -15,7 +14,6 @@ import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import HomepageHeader from "./layout/HomepageHeader";
-import ScrollToTop from "./components/comman/ScrollToTop";
 import Loader from "./components/comman/Loader";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -40,10 +38,8 @@ function App() {
   return (
     <div className="App">
      <Header />
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/terms" element={<Terms />} />

@@ -4,6 +4,9 @@ import Counter from "../components/home/Counter";
 import HomeAbout from "../components/home/HomeAbout";
 import HomeService from "../components/home/HomeService";
 import WhyChoose from "../components/home/WhyChoose";
+import VisionMission from "../components/home/VisionMission";
+import Team from "../components/home/Team";
+import TestimonialSection from "../components/home/TestimonialSection";
 // import Testimonial from "../components/home/Testimonial";
 // import Advertisement from "../components/home/Advertisement";
 
@@ -14,7 +17,10 @@ const Home = () => {
             <Counter />
             <HomeAbout />
             <WhyChoose />
+            <VisionMission />
             <HomeService />
+            <Team />
+            <TestimonialSection />
             {/* <Testimonial /> */}
             {/* <Advertisement /> */}
         </div>

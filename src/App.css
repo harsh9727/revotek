@@ -881,7 +881,6 @@ footer {
   width: 10px;
   height: 2px;
   background-color: var(--color-blue);
-  border-radius: 50%;
 }
 .about-content .title {
   font-size: 48px;
@@ -920,6 +919,7 @@ footer {
 .home-service {
   padding: 100px 0;
   overflow: hidden;
+  background-color: var(--color-gray);
 }
 .service-btn {
   text-align: end;
@@ -1087,12 +1087,13 @@ footer {
 /*teams*/
 .teams {
   padding: 100px 0;
-  background-color: var(--color-gray);
+  overflow: hidden;
 }
 .teams .about-content {
   width: 60%;
   margin: 0 auto 50px;
   text-align: center;
+  padding-right: 0px;
 }
 .teams .about-content .sub-title {
   margin: 0 auto 10px;
@@ -1210,14 +1211,15 @@ footer {
   object-fit: cover;
 }
 .testimonial-slider-content {
-  position: absolute;
+  /* position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
   padding: 30px;
   background-color: var(--color-white);
   border-radius: 20px;
-  width: 55%;
+  width: 95%;
+  min-height: 260px;
 }
 .testimonial-slider-content ul {
   display: flex;
@@ -1534,3 +1536,75 @@ footer {
     width: max-content;
     box-shadow: var(--box-shadow);
 }
+.vision-mission {
+    padding: 100px 0;
+    overflow: hidden;
+}
+.vision-mission .about-content{
+  margin-bottom: 40px;
+  text-align: center;
+  padding-right: 0px;
+}
+.vision-mission .about-content .sub-title{
+  margin: 0 auto 20px;
+  width: max-content;
+}
+.vision-mission .about-content .description{
+  font-size: 18px;
+  line-height: 24px;
+  width:80%;
+  margin: 0 auto;
+}
+.visionmission-content .vision-mission-img{
+  height: 350px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.visionmission-content .vision-mission-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visionmission-content .title{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-blue);
+  margin-bottom: 20px;
+}
+.visionmission-content .description{
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+}
+.visionmission-content .list li{
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+.visionmission-content .list li::before{
+  content: "\F26B";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-blue);
+}
+.testimonial-section{
+  padding: 100px 0;
+  background-color: var(--color-gray);
+  overflow: hidden;
+}
+.testimonial-section .about-content .description{
+  font-size: 18px;
+  line-height: 24px;
+}
+

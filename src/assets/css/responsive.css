@@ -3,6 +3,7 @@
   .navbar-toggler {
     padding: 5px;
   }
+
   .navbar-toggler:hover,
   .navbar-toggler:focus,
   .navbar-toggler:focus-visible {
@@ -10,26 +11,31 @@
     outline: none;
     box-shadow: none;
   }
+
   .offcanvas {
     width: 300px !important;
   }
 }
+
 /*banner*/
 @media (max-width: 767px) {
   .comman-banner .commanbanner-content h3 {
     font-size: 36px;
   }
 }
+
 /*footer*/
 @media (max-width: 1199px) {
   .footer-contact ul li a.map svg {
     font-size: 40px;
   }
 }
+
 @media (max-width: 991px) {
   .footer-contact {
     padding-left: 0px;
   }
+
   .footer-map {
     margin-top: 30px;
   }
@@ -39,22 +45,27 @@
   .footer-contact {
     margin: 30px 0 0;
   }
+
   .footer-contact ul li a.map svg {
     font-size: 30px;
   }
+
   .copyright-text {
     flex-direction: column-reverse;
   }
+
   .copyright-text p {
     margin-top: 7px;
   }
 }
+
 /*contact*/
 
 @media (max-width: 991px) {
-  .contactform > .container > .row {
+  .contactform>.container>.row {
     flex-direction: column-reverse;
   }
+
   .contactform-left {
     margin-top: 30px;
   }
@@ -64,16 +75,20 @@
   .contactform-right .contact-list ul li a {
     flex-direction: column;
   }
+
   .contactform-right .contact-list ul li a .contact-list-icon {
     margin-right: 0px;
     margin-bottom: 10px;
   }
+
   .contact-list-text {
     text-align: center;
   }
+
   .contactform-right .contact-list ul li a .contact-list-text h5 {
     margin-bottom: 5px;
   }
+
   .contactform-left h3 {
     font-size: 30px;
   }
@@ -84,30 +99,37 @@
   .servicecard {
     padding: 20px;
   }
+
   .servicecard-section .servicecard-icon {
     height: 210px;
   }
+
   .servicecard-section .servicecard h3 {
     min-height: 55px;
   }
 }
+
 @media (max-width: 991px) {
   .servicecard-section {
     padding: 70px 0;
   }
 }
+
 @media (max-width: 767px) {
   .servicecard-section .servicecard-icon {
     height: 170px;
   }
+
   .contact-btn span {
     font-size: 16px;
   }
+
   .servicecard-section .servicecard p {
     font-size: 16px;
     line-height: 22px;
   }
 }
+
 @media (max-width: 575px) {
   .servicecard-section .servicecard h3 {
     min-height: auto;
@@ -120,109 +142,167 @@
     min-height: 50px;
   }
 }
+
 @media (max-width: 1199px) {
   .homeabout .about-imgs .main-img {
     width: 85%;
   }
+
   .homeabout .about-imgs .about-img {
     height: 170px;
     width: 170px;
   }
+
   .why-choose-list .why-choose-wrap .why-choose-details .title {
     padding-bottom: 10px;
     margin-bottom: 10px;
   }
+
   .why-choose-list {
     gap: 0 15px;
   }
+
   .why-choose-list .why-choose-wrap {
     gap: 15px;
     padding-bottom: 20px;
   }
+
   .why-choose-list .why-choose-wrap .why-choose-details .title {
     font-size: 20px;
   }
+
   .service-slider .service-img {
     height: 200px;
   }
+
   .about-content .title {
     font-size: 40px;
     line-height: 50px;
   }
+
   .rotating-text {
     height: 200px;
   }
+
+  .homebanner-content .title {
+    font-size: 54px;
+  }
+  .about-content{
+    padding-right: 0px;
+  }
 }
+
 @media (max-width: 991px) {
   .homebanner-content {
     width: 60%;
   }
+
   .homebanner-content .title {
-    font-size: 44px;
+    font-size: 42px;
   }
+
   .homebanner-content .title span {
-    line-height: 50px;
+    line-height: 44px;
   }
+
   .rotating-text {
-    height: 150px;
+    height: 130px;
   }
-  .homeabout > .container > .row {
+
+  .homeabout>.container>.row {
     flex-direction: column-reverse;
   }
+
   .homeabout .about-content {
     padding-right: 0px;
     padding-top: 30px;
   }
+
   .homeabout {
     padding-bottom: 70px;
   }
+
   .left-img img {
     display: none;
   }
+
   .why-choose {
     padding: 70px 0;
   }
+
   .home-service {
     padding: 70px 0 50px;
   }
+
   .homeabout {
     padding: 70px 0;
   }
-.comman-banner img{
-  object-position: center;
+
+  .comman-banner img {
+    object-position: center;
+  }
+
+  .why-choose-content .about-content {
+    width: 100%;
+  }
+
+  .about-content .title {
+    font-size: 38px;
+  }
+
+  .vision-mission .about-content .description {
+    width: 100%;
+  }
+
+  .visionmission-content {
+    margin-bottom: 20px;
+  }
+
+  .teams-card {
+    margin-bottom: 20px;
+  }
 }
-}
+
 @media (max-width: 767px) {
   .service-btn {
     text-align: center;
   }
+
   .home-service .about-content {
     padding-right: 0px;
     text-align: center;
   }
+
   .home-service .about-content .title {
     font-size: 36px;
     line-height: 45px;
     margin-bottom: 15px;
   }
+
   .home-service .about-content .sub-title {
     margin: 0 auto 15px;
   }
+
   .service-slider .servicecard h3 {
     min-height: auto;
   }
+
   .service-slider .service-img {
     height: 270px;
   }
+
   .why-choose-content .about-content {
     width: 100%;
   }
+
   .counter-content {
     padding: 10px 0;
   }
+
   .homebanner img {
     object-position: right;
   }
+
   .homebanner-content {
     width: 90%;
     padding: 30px;
@@ -230,89 +310,159 @@
     border-radius: 30px;
     box-shadow: var(--box-shadow);
   }
+
+  .homebanner-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .homebanner-content .title {
     font-size: 34px;
     height: 90px;
   }
+
   .homebanner-content .title span {
     line-height: 44px;
   }
+
   .up-icon {
     bottom: 65px;
   }
+
   .comman-banner img {
     object-position: right;
   }
 
 }
+
 @media (max-width: 575px) {
   .why-choose-list {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .why-choose-details .text {
     text-align: justify;
     font-size: 15px;
   }
+
   .about-content .title {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 36px;
   }
+
+
   .why-choose-content .about-content .title {
     font-size: 32px;
     line-height: 36px;
   }
+
   .home-service .about-content .title {
     font-size: 32px;
     line-height: 36px;
   }
+
   .homebanner {
     border-radius: 0 0 50px 50px;
   }
+
   .homebanner-content {
     width: 95%;
     padding: 20px;
   }
+
   .homebanner-content .description {
     font-size: 16px;
     line-height: 20px;
   }
+
   .homeabout .about-imgs .about-img {
     width: 120px;
     height: 120px;
   }
+
   .homeabout .about-imgs .main-img {
     width: 95%;
   }
 
 }
 
-@media(max-width:1199px){
-.service-details-content .serviceimg{
-  height: 450px;
+@media(max-width:1199px) {
+  .service-details-content .serviceimg {
+    height: 450px;
+  }
 }
+
+@media(max-width:991px) {
+  .service-details-content .serviceimg {
+    height: 400px;
+  }
 }
-@media(max-width:991px){
-.service-details-content .serviceimg{
-  height: 400px;
+
+@media(max-width:575px) {
+  .service-details-content .serviceimg {
+    height: 250px;
+  }
 }
-}
-@media(max-width:575px){
-.service-details-content .serviceimg{
-  height: 350px;
-}
-}
+
 /*comman banner*/
-@media(max-width:767px){
-  .comman-banner .commanbanner-content{
+@media(max-width:767px) {
+  .comman-banner .commanbanner-content {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   .comman-banner .commanbanner-content .breadcrumb {
     margin: 0 auto;
+  }
 }
-}
-@media(max-width:575px){
-  .comman-banner .commanbanner-content .breadcrumb{
+
+@media(max-width:575px) {
+  .comman-banner .commanbanner-content .breadcrumb {
     display: none;
+  }
+}
+
+@media(max-width:1199px) {
+
+  .teams .about-content {
+    width: 70%;
+  }
+
+  .teams-card .teams-img {
+    height: 260px;
+  }
+
+  .teams-card .teams-img img {
+    object-fit: contain;
+  }
+
+  .testimonial-slider-content .review {
+    min-height: 125px;
+  }
+}
+
+@media(max-width:991px) {
+  .teams .about-content {
+    width: 100%;
+  }
+}
+
+@media(max-width:575px) {
+  .homebanner-content .title {
+    font-size: 28px;
+    height: 100px;
+  }
+  .homebanner-content .title span{
+    line-height: 34px;
+  }
+  .about-content .description{
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  .copyright-text .quick-links li a{
+    font-size: 15px;
+  }
+    .visionmission-content .vision-mission-img{
+    height: 220px;
   }
 }

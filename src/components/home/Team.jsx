@@ -16,7 +16,7 @@ const Team = () => {
           </p>
         </div>
         <Row>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={6} sm={6}>
             <div className="teams-card">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
@@ -24,8 +24,8 @@ const Team = () => {
               </div>
               <div className="teamperson-content">
                 <div className="teamperson-info">
-                  <h5>John Doe</h5>
-                  <p>General Manager</p>
+                  <h5>Dilip Varlekar</h5>
+                  <p>CEO</p>
                 </div>
                 <a href="tell:1234567890">
                   <IoCallSharp />
@@ -33,7 +33,7 @@ const Team = () => {
               </div>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={6} sm={6}>
             <div className="teams-card">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
@@ -49,7 +49,7 @@ const Team = () => {
               </div>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={6} sm={6}>
             <div className="teams-card">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
@@ -65,7 +65,7 @@ const Team = () => {
               </div>
             </div>
           </Col>
-          <Col md={3} sm={6}>
+          <Col lg={3} md={6} sm={6}>
             <div className="teams-card">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />

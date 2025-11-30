@@ -111,13 +111,13 @@ const Footer = () => {
             </p>
             <ul className="quick-links">
               <li>
-                <a href="/">About Us</a>
+                <a href="/">Home</a>
               </li>
-              {/* <li>
-                <a href="/about">About</a>
-              </li> */}
               <li>
-                <a href="/services">Services</a>
+                <a href="/#about">About Us</a>
+              </li>
+              <li>
+                <a href="/services">Our Services</a>
               </li>
               <li>
                 <a href="/contact">Contact Us</a>
