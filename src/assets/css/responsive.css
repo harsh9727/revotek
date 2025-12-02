@@ -187,7 +187,8 @@
   .homebanner-content .title {
     font-size: 54px;
   }
-  .about-content{
+
+  .about-content {
     padding-right: 0px;
   }
 }
@@ -452,17 +453,67 @@
     font-size: 28px;
     height: 100px;
   }
-  .homebanner-content .title span{
+
+  .homebanner-content .title span {
     line-height: 34px;
   }
-  .about-content .description{
+
+  .about-content .description {
     font-size: 16px !important;
     line-height: 20px !important;
   }
-  .copyright-text .quick-links li a{
+
+  .copyright-text .quick-links li a {
     font-size: 15px;
   }
-    .visionmission-content .vision-mission-img{
+
+  .visionmission-content .vision-mission-img {
     height: 220px;
+  }
+}
+
+/*download*/
+@media(max-width:1199px) {
+  .download-content::before {
+    width: 200px;
+    height: 220px;
+  }
+
+  .download-content::after {
+    width: 200px;
+    height: 220px;
+  }
+}
+
+@media (max-width:991px) {
+  .download-content::before {
+    width: 150px;
+    height: 180px;
+    border: 15px solid var(--color-white);
+  }
+}
+
+@media (max-width:767px) {
+  .download-content::before {
+    display: none;
+  }
+
+  .download-content::after {
+    display: none;
+  }
+
+  .download-content .title {
+    font-size: 30px;
+  }
+
+  .download-content {
+    height: 190px;
+  }
+}
+
+@media(max-width:575px) {
+  .download-content .title {
+    font-size: 26px;
+    text-align: center;
   }
 }

@@ -1228,13 +1228,14 @@ footer {
   margin-bottom: 15px;
 }
 .testimonial-slider-content ul li svg {
-  color: var(--color-blue);
+  color: orange;
 }
 .testimonial-slider-content .review {
   font-size: 17px;
   color: var(--text-gray);
   line-height: 1.4;
   font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .qoute-icon {
@@ -1607,4 +1608,65 @@ footer {
   font-size: 18px;
   line-height: 24px;
 }
-
+.download{
+  padding: 70px 0;
+}
+.download-content {
+  height: 250px;
+  background-color: var(--color-blue);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.download-content::before{
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -10px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 25px solid  var(--color-white);
+  z-index: 1;
+}
+.download-content::after{
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -0px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 5px solid  var(--color-white);
+  z-index: 1;
+}
+.download-content .title{
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 15px;
+}
+.download-content .contact-btn{
+  background-color: var(--color-black);
+  border: 1px solid var(--color-black);
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-width: 250px;
+  justify-content: center;
+  line-height: normal;
+  transition: all .5s ease-in-out;
+}
+.download-content .contact-btn:hover, .download-content .contact-btn:focus, .download-content .contact-btn:focus-visible{
+  border: 1px solid var(--color-black);
+  background-color: transparent;
+  color: var(--color-black);
+  box-shadow: none;
+}

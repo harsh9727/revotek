@@ -9,6 +9,7 @@ import Team from "../components/home/Team";
 import TestimonialSection from "../components/home/TestimonialSection";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Download from "../components/home/Download";
 // import Testimonial from "../components/home/Testimonial";
 // import Advertisement from "../components/home/Advertisement";
 
@@ -35,6 +36,7 @@ const Home = () => {
             <HomeService />
             <Team />
             <TestimonialSection />
+            <Download />
             {/* <Testimonial /> */}
             {/* <Advertisement /> */}
         </div>
