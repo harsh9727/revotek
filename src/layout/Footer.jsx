@@ -31,12 +31,12 @@ const Footer = () => {
                 </p>
                 <ul>
                   <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/profile.php?id=61584123771185" target="_blank" rel="noopener noreferrer">
                       <CiFacebook />
                     </a>
                   </li>
                   <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/revotek_solution/" target="_blank" rel="noopener noreferrer">
                       <CiInstagram />
                     </a>
                   </li>

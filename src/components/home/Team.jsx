@@ -6,7 +6,7 @@ const Team = () => {
   return (
     <section className="teams">
       <Container>
-        <div className="about-content">
+        <div className="about-content" data-aos="fade-up">
           <h5 className="sub-title">Our Teams</h5>
           <h3 className="title">Meet Our Expert Team</h3>
           <p className="description">
@@ -17,7 +17,7 @@ const Team = () => {
         </div>
         <Row>
           <Col lg={3} md={6} sm={6}>
-            <div className="teams-card">
+            <div className="teams-card" data-aos="zoom-in">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
                 
@@ -34,7 +34,7 @@ const Team = () => {
             </div>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <div className="teams-card">
+            <div className="teams-card" data-aos="zoom-in">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
               </div>
@@ -50,7 +50,7 @@ const Team = () => {
             </div>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <div className="teams-card">
+            <div className="teams-card" data-aos="zoom-in">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
               </div>
@@ -66,7 +66,7 @@ const Team = () => {
             </div>
           </Col>
           <Col lg={3} md={6} sm={6}>
-            <div className="teams-card">
+            <div className="teams-card" data-aos="zoom-in">
               <div className="teams-img">
                 <img src={TeamImg1} alt="teams-img" />
               </div>

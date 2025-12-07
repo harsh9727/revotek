@@ -129,7 +129,7 @@ const HomeService = () => {
         <div className="service-slider">
           <Slider {...sliderService}>
             {services.map((service, index) => (
-              <div className="servicecard" key={index} data-aos="flip-left">
+              <div className="servicecard" key={index} data-aos="zoom-in-down">
                 <div className="servicecard-icon">
                   <img src={service.icon} alt="service-icon" />
                 </div>

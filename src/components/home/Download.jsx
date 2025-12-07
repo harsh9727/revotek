@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const Download = () => {
     return (
-        <section className="download">
+        <section className="download" data-aos="zoom-in">
             <Container>
                 <div className="download-content">
                     <h3 className="title">Download Our Products Brochures</h3>

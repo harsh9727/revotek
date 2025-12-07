@@ -7,7 +7,7 @@ const VisionMission = () => {
     return (
         <section className="vision-mission">
             <Container>
-                <div className="about-content">
+                <div className="about-content" data-aos="fade-up">
                     <h5 className="sub-title">Our Vision Mission</h5>
                     <h3 className="title">Guided by Vision, Strengthened by Mission</h3>
                     <p className="description">
@@ -16,15 +16,15 @@ const VisionMission = () => {
                 </div>
                 <Row>
                     <Col lg={6}>
-                        <div className="visionmission-content">
-                            <div className="vision-mission-img">
+                        <div className="visionmission-content" >
+                            <div className="vision-mission-img" data-aos="flip-up">
                                 <img src={Vision} alt="Vision_img" />
                             </div>
-                            <h3 className="title">Our Vision</h3>
-                            <p className="description">
+                            <h3 className="title" data-aos="fade-up">Our Vision</h3>
+                            <p className="description" data-aos="fade-up">
                                 We aim to become a trusted leader in the elevator industry by setting new benchmarks in quality, efficiency, and customer satisfaction. Our focus is on delivering modern solutions that improve comfort, enhance safety, and elevate everyday living.
                             </p>
-                            <ul className="list">
+                            <ul className="list" data-aos="fade-up">
                                 <li>To deliver world-class elevator solutions that ensure maximum safety and reliability.</li>
                                 <li>To adopt modern technologies and smarter systems for smooth, efficient vertical movement.</li>
                                 <li>To become a leading name known for professionalism, innovation, and long-term trust.</li>
@@ -38,15 +38,15 @@ const VisionMission = () => {
                         </div>
                     </Col>
                     <Col lg={6}>
-                        <div className="visionmission-content">
-                            <div className="vision-mission-img">
+                        <div className="visionmission-content" >
+                            <div className="vision-mission-img" data-aos="flip-up">
                                 <img src={Mission} alt="Mission_img" />
                             </div>
-                            <h3 className="title">Our Mission</h3>
-                            <p className="description">
+                            <h3 className="title" data-aos="fade-up">Our Mission</h3>
+                            <p className="description" data-aos="fade-up">
                                 We are committed to ensuring every installation, upgrade, and maintenance job is completed with precision, professionalism, and customer-focused care. Our goal is to keep buildings moving smoothly—today, tomorrow, and always.
                             </p>
-                            <ul className="list">
+                            <ul className="list" data-aos="fade-up">
                                 <li>To provide timely, efficient, and hassle-free elevator maintenance and support.</li>
                                 <li>To ensure maximum safety and smooth operation through quality workmanship.</li>
                                 <li>To deliver customized elevator solutions tailored to each building’s needs.</li>

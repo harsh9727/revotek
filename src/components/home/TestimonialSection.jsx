@@ -80,7 +80,7 @@ const TestimonialSection = () => {
         </div>
         <Slider {...Testimonial}>
           {testimonials.map((testimonial, index) => (
-            <div key={index}>
+            <div key={index} data-aos="flip-up">
               <div className="testimonial-slider-content">
                 <ul>
                   <li>
