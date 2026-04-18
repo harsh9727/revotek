@@ -8,7 +8,7 @@ const VisionMission = () => {
         <section className="vision-mission">
             <Container>
                 <div className="about-content" data-aos="fade-up">
-                    <h5 className="sub-title">Our Vision Mission</h5>
+                    <h5 className="sub-title">Our Vision Missionnnnnnn</h5>
                     <h3 className="title">Guided by Vision, Strengthened by Mission</h3>
                     <p className="description">
                         We are committed to delivering safe, reliable, and innovative elevator solutions that enhance everyday living. Our focus is on quality, customer trust, and long-term service excellence.
