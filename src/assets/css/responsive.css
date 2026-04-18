@@ -417,9 +417,9 @@
   }
 }
 
-@media(max-width:575px) {
+@media(max-width:499px) {
   .comman-banner .commanbanner-content .breadcrumb {
-    display: none;
+    width: fit-content;
   }
 }
 
