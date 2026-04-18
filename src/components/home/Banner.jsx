@@ -1,9 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import bannerImg from "../../assets/images/homebanner.jpg";
-import arrow from "../../assets/images/arrow-right.svg";
 import { LuCircleArrowRight } from "react-icons/lu";
-import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <section className="homebanner">
