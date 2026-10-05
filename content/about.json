@@ -3,7 +3,7 @@
     "hero": {
       "badgeTitle": "About Revotek Elevators",
       "heading": "Elevator Experts You Can Trust in Gujarat",
-      "description": "Revotek Elevators is a professional elevator service company based in Gujarat, Gujarat. We specialize in elevator installation, maintenance, repair, and modernization for residential, commercial, and industrial buildings across India.",
+      "description": "Revotek Elevators is a professional elevator service company based in Gujarat. We specialize in elevator installation, maintenance, repair, and modernization for residential, commercial, and industrial buildings across India.",
       "assets_bannerImage": {
         "src": "/assets/about-main.webp",
         "alt": "Revotek Elevators team at work in Gujarat"
@@ -17,7 +17,7 @@
         "From the first site inspection to long-term AMC support, Revotek Elevators is with you at every stage of your elevator's lifecycle. We believe reliable vertical mobility is not a luxury it is a necessity, and we treat every project with that responsibility in mind."
       ],
       "assets_bannerImage": {
-        "src": "/assets/aboutbanner2.webp",
+        "src": "/assets/aboutbanner2.webp?v=2",
         "alt": "Revotek Elevators technician servicing an elevator in Ahmedabad"
       }
     },

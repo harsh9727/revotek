@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 
     loader: "default",
+    localPatterns: [
+      { pathname: "/**", search: "" },
+      { pathname: "/assets/aboutbanner2.webp", search: "?v=2" },
+    ],
 
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: false,
@@ -47,7 +51,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            value: "public, max-age=0, must-revalidate",
           },
         ],
       },

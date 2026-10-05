@@ -7,12 +7,9 @@ import { baseInfo } from "@/seo-configs/baseInfo";
 // Controls how your site behaves when added to home screen (PWA)
 // Also read by Google for rich install experiences in search results
 //
-// Required assets to add to /public/:
-//   icon-192.png   → 192x192px — Android home screen
-//   icon-512.png   → 512x512px — Android splash screen
-//   icon-180.png   → 180x180px — Apple touch icon
-//   icon-96.png    → 96x96px  — Favicon fallback
-//   icon.svg       → Scalable — modern browsers, pinned tabs
+// Available icons in /public/:
+//   favicon-96x96.png        → 96x96px
+//   android-icon-192x192.png → 192x192px
 //
 // Generate all sizes from one SVG at: https://realfavicongenerator.net
 // Validate manifest at: https://manifest-validator.appspot.com
@@ -59,44 +56,18 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
 
     // ── Icons ─────────────────────────────────────────────────────────────────
-    // Provide multiple sizes — OS picks the best fit
-    // "purpose: maskable" → icon safe for adaptive icon shapes (Android)
-    // "purpose: any"      → standard icon usage
+    // Use existing assets only; don't advertise missing sizes or formats.
     icons: [
       {
-        src: "/icon-96.png",
+        src: "/favicon-96x96.png",
         sizes: "96x96",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/icon-192.png",
+        src: "/android-icon-192x192.png",
         sizes: "192x192",
         type: "image/png",
-        purpose: "any",
-      },
-      {
-        src: "/icon-192.png",
-        sizes: "192x192",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/icon-512.png",
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "any",
-      },
-      {
-        src: "/icon-512.png",
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/icon.svg",
-        sizes: "any",
-        type: "image/svg+xml",
         purpose: "any",
       },
     ],
@@ -133,14 +104,14 @@ export default function manifest(): MetadataRoute.Manifest {
       //   short_name: "Blog",
       //   description: "Read our latest articles",
       //   url: "/blog?utm_source=pwa&utm_medium=shortcut",
-      //   icons: [{ src: "/icon-96.png", sizes: "96x96" }],
+      //   icons: [{ src: "/favicon-96x96.png", sizes: "96x96" }],
       // },
       // {
       //   name: "Contact",
       //   short_name: "Contact",
       //   description: "Get in touch with us",
       //   url: "/contact?utm_source=pwa&utm_medium=shortcut",
-      //   icons: [{ src: "/icon-96.png", sizes: "96x96" }],
+      //   icons: [{ src: "/favicon-96x96.png", sizes: "96x96" }],
       // },
     ],
 

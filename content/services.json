@@ -545,11 +545,527 @@
           }
         ],
         "assets_bannerImage": {
-          "src": "/assets/services/spare-parts.webp",
+          "src": "/assets/services/spare-part.webp",
           "alt": "Elevator spare parts inventory at Revotek Elevators Ahmedabad including control boards motors and safety components"
         },
         "cta": {
           "label": "Request Parts Availability",
+          "href": "/contact"
+        }
+      },
+      {
+        "slug": "home-elevators",
+        "title": "Home Elevators",
+        "shortDescription": "Premium home elevator solutions designed for residential buildings with smooth operation, compact design, and enhanced safety.",
+        "metaTitle": "Home Elevators in Ahmedabad | Revotek Elevators",
+        "metaDescription": "Premium home elevator installation in Ahmedabad and Gujarat for villas, bungalows, and residential buildings. Compact designs, smooth operation, and reliable safety systems.",
+        "keywords": [
+          "home elevators Ahmedabad",
+          "home lift Ahmedabad",
+          "residential elevator Gujarat",
+          "villa elevator Ahmedabad",
+          "home lift installation Gujarat"
+        ],
+        "hero": {
+          "badgeTitle": "Home Elevators",
+          "heading": "Premium Home Elevators for Modern Residences",
+          "description": "Revotek Elevators provides customized home elevator solutions for villas, bungalows, and residential buildings across Gujarat. Our home elevators combine compact design, smooth performance, modern aesthetics, and reliable safety features for comfortable everyday mobility."
+        },
+        "overview": "A home elevator adds convenience, accessibility, and long-term value to a modern residence. Revotek Elevators designs and installs residential elevator systems based on your available space, floor configuration, usage requirements, and interior preferences. From compact solutions for existing homes to premium elevators for new villas, we provide complete installation and support.",
+        "process": [
+          {
+            "title": "Site Inspection & Space Assessment",
+            "description": "Evaluation of available space, floor height, structural requirements, and access points to identify the right home elevator solution."
+          },
+          {
+            "title": "Elevator Selection & Customized Design",
+            "description": "Selection of suitable elevator specifications, cabin dimensions, finishes, and control systems based on your home's architecture and requirements."
+          },
+          {
+            "title": "Equipment Procurement & Quality Check",
+            "description": "Sourcing quality elevator components and checking all equipment before installation at your residential property."
+          },
+          {
+            "title": "Professional Installation",
+            "description": "Precise mechanical and electrical installation by trained technicians with attention to safety, alignment, and finishing."
+          },
+          {
+            "title": "Testing & Safety Validation",
+            "description": "Complete testing of elevator movement, doors, controls, safety systems, and emergency features before handover."
+          },
+          {
+            "title": "Handover & User Guidance",
+            "description": "Final handover with operating guidance, safety instructions, documentation, and recommendations for regular maintenance."
+          }
+        ],
+        "features": [
+          "Compact elevator options suitable for residential spaces",
+          "Modern cabin interiors and finish options",
+          "Smooth and quiet operation for everyday home use",
+          "Advanced safety and emergency systems",
+          "Customized solutions for villas, bungalows, and multi-storey homes"
+        ],
+        "benefits": [
+          "Improved accessibility and convenience for residents",
+          "Space-efficient elevator solutions for residential buildings",
+          "Enhanced comfort and smooth vertical transportation",
+          "Modern appearance that complements your home's interiors",
+          "Reliable long-term performance with professional support"
+        ],
+        "faqs": [
+          {
+            "question": "Can a home elevator be installed in an existing house?",
+            "answer": "Yes. Home elevators can be planned for many existing residential buildings after a site and structural assessment. Revotek evaluates the available space and recommends a suitable solution."
+          },
+          {
+            "question": "Are home elevators suitable for villas and bungalows?",
+            "answer": "Yes. Home elevators are well suited for villas, bungalows, duplexes, and multi-storey residential buildings where convenient vertical mobility is required."
+          },
+          {
+            "question": "Can I customize the home elevator cabin?",
+            "answer": "Yes. Cabin finishes, lighting, flooring, panels, and other interior elements can be selected according to the home's design and customer preferences."
+          },
+          {
+            "question": "Do home elevators require regular maintenance?",
+            "answer": "Yes. Regular preventive maintenance is recommended to keep the elevator safe, smooth, and reliable and to identify potential issues before they become breakdowns."
+          }
+        ],
+        "assets_bannerImage": {
+          "src": "/assets/services/home-elevator.webp",
+          "alt": "Modern home elevator installed in a residential building by Revotek Elevators"
+        },
+        "cta": {
+          "label": "Get a Home Elevator Quote",
+          "href": "/contact"
+        }
+      },
+      {
+        "slug": "passenger-elevators",
+        "title": "Passenger Elevators",
+        "shortDescription": "Reliable passenger elevators for residential and commercial buildings with smooth rides, modern controls, and dependable safety systems.",
+        "metaTitle": "Passenger Elevators in Ahmedabad | Revotek Elevators",
+        "metaDescription": "Passenger elevator installation in Ahmedabad and Gujarat for residential and commercial buildings. Reliable performance, modern controls, customized cabins, and safety systems.",
+        "keywords": [
+          "passenger elevator Ahmedabad",
+          "passenger lift Ahmedabad",
+          "commercial passenger elevator Gujarat",
+          "residential passenger lift Ahmedabad",
+          "passenger elevator installation Gujarat"
+        ],
+        "hero": {
+          "badgeTitle": "Passenger Elevators",
+          "heading": "Reliable Passenger Elevators for Every Building",
+          "description": "Revotek Elevators provides passenger elevator solutions for residential, commercial, and institutional buildings across Gujarat. We deliver customized systems focused on smooth rides, efficient operation, modern design, and dependable passenger safety."
+        },
+        "overview": "Passenger elevators are an essential part of modern multi-storey buildings. Revotek Elevators offers passenger elevator solutions designed around building height, traffic requirements, capacity, available shaft space, and architectural preferences. Our team manages the complete process from site assessment and planning to installation, testing, and ongoing service.",
+        "process": [
+          {
+            "title": "Building & Traffic Assessment",
+            "description": "Evaluation of building structure, passenger traffic, travel height, floor count, and shaft dimensions to determine the appropriate elevator configuration."
+          },
+          {
+            "title": "Capacity & System Planning",
+            "description": "Selection of elevator capacity, speed, drive system, cabin size, and control features based on the building's usage requirements."
+          },
+          {
+            "title": "Customized Cabin & Equipment Selection",
+            "description": "Selection of cabin finishes, doors, indicators, control panels, and elevator components according to the project requirements."
+          },
+          {
+            "title": "Installation & Integration",
+            "description": "Professional installation of mechanical, electrical, control, and safety systems by trained elevator technicians."
+          },
+          {
+            "title": "Performance & Safety Testing",
+            "description": "Comprehensive testing of ride quality, door operation, controls, emergency systems, and safety devices before commissioning."
+          },
+          {
+            "title": "Commissioning & Handover",
+            "description": "Final commissioning, documentation, user guidance, and handover after successful performance and safety validation."
+          }
+        ],
+        "features": [
+          "Passenger elevators for residential and commercial buildings",
+          "Multiple capacity and speed configurations",
+          "Modern cabin interiors and control panels",
+          "Smooth ride performance with advanced drive systems",
+          "Comprehensive passenger safety features"
+        ],
+        "benefits": [
+          "Comfortable and efficient movement between floors",
+          "Suitable solutions for different building sizes and traffic levels",
+          "Modern aesthetics that complement commercial and residential spaces",
+          "Reliable performance with professional installation",
+          "Long-term service and maintenance support"
+        ],
+        "faqs": [
+          {
+            "question": "Where are passenger elevators commonly used?",
+            "answer": "Passenger elevators are commonly used in residential apartments, offices, hotels, shopping complexes, hospitals, educational buildings, and other multi-storey properties."
+          },
+          {
+            "question": "Can passenger elevators be customized?",
+            "answer": "Yes. Capacity, speed, cabin dimensions, finishes, doors, indicators, and control features can be customized according to project requirements."
+          },
+          {
+            "question": "How do I choose the right passenger elevator capacity?",
+            "answer": "The required capacity depends on building type, number of floors, expected passenger traffic, available space, and usage patterns. A site assessment helps determine the appropriate configuration."
+          },
+          {
+            "question": "Do you provide maintenance after installation?",
+            "answer": "Yes. Revotek provides preventive maintenance, repair, AMC, and ongoing support to help keep passenger elevators safe and reliable."
+          }
+        ],
+        "assets_bannerImage": {
+          "src": "/assets/services/passanger-elevator.webp",
+          "alt": "Modern passenger elevator installed by Revotek Elevators in Ahmedabad"
+        },
+        "cta": {
+          "label": "Get a Passenger Elevator Quote",
+          "href": "/contact"
+        }
+      },
+      {
+        "slug": "mrl-elevators",
+        "title": "MRL Elevators",
+        "shortDescription": "Machine Room Less elevators that provide space-efficient, energy-efficient, and modern vertical transportation for residential and commercial buildings.",
+        "metaTitle": "MRL Elevators in Ahmedabad | Revotek Elevators",
+        "metaDescription": "Machine Room Less (MRL) elevator solutions in Ahmedabad and Gujarat. Space-saving design, efficient operation, modern controls, and professional installation.",
+        "keywords": [
+          "MRL elevator Ahmedabad",
+          "machine room less elevator Gujarat",
+          "MRL lift installation Ahmedabad",
+          "machine room less lift Gujarat",
+          "MRL elevator company Ahmedabad"
+        ],
+        "hero": {
+          "badgeTitle": "MRL Elevators",
+          "heading": "Space-Efficient Machine Room Less Elevators",
+          "description": "Revotek Elevators provides Machine Room Less (MRL) elevator solutions for modern residential and commercial buildings across Gujarat. MRL technology eliminates the need for a separate machine room while providing efficient operation, modern design, and reliable performance."
+        },
+        "overview": "Machine Room Less elevators are designed for buildings where efficient use of space is important. By integrating the traction machine within the elevator shaft area, MRL systems can eliminate the need for a traditional machine room. Revotek provides customized MRL solutions based on building height, capacity, shaft dimensions, traffic requirements, and project design.",
+        "process": [
+          {
+            "title": "Site & Shaft Assessment",
+            "description": "Detailed evaluation of shaft dimensions, building height, pit depth, overhead space, and structural requirements for MRL installation."
+          },
+          {
+            "title": "System & Capacity Selection",
+            "description": "Selection of suitable MRL capacity, speed, motor, controller, cabin, and door configuration based on building usage."
+          },
+          {
+            "title": "Design & Engineering",
+            "description": "Preparation of the elevator layout and technical configuration to ensure efficient integration with the building structure."
+          },
+          {
+            "title": "MRL Equipment Installation",
+            "description": "Professional installation of the traction machine, controller, rails, cabin, doors, and safety components within the planned shaft configuration."
+          },
+          {
+            "title": "Testing & Commissioning",
+            "description": "Complete testing of motor performance, ride quality, controls, doors, safety systems, and emergency functions."
+          },
+          {
+            "title": "Handover & Maintenance Guidance",
+            "description": "Final documentation, user guidance, and maintenance recommendations after successful commissioning."
+          }
+        ],
+        "features": [
+          "Machine Room Less configuration",
+          "Space-saving elevator system for modern buildings",
+          "Energy-efficient traction technology",
+          "Modern VVVF control options",
+          "Suitable for residential and commercial applications"
+        ],
+        "benefits": [
+          "No separate traditional machine room requirement",
+          "Better utilization of available building space",
+          "Efficient operation and modern control technology",
+          "Flexible solution for new building projects",
+          "Professional installation and long-term service support"
+        ],
+        "faqs": [
+          {
+            "question": "What does MRL mean in an elevator?",
+            "answer": "MRL stands for Machine Room Less. In an MRL elevator, the traction machine and associated equipment are arranged within the shaft area, reducing the need for a separate machine room."
+          },
+          {
+            "question": "What are the advantages of an MRL elevator?",
+            "answer": "MRL elevators can save building space, provide efficient operation, and offer a modern solution for many residential and commercial buildings."
+          },
+          {
+            "question": "Are MRL elevators suitable for residential buildings?",
+            "answer": "Yes. MRL elevators are commonly suitable for residential buildings where space efficiency, smooth operation, and modern design are important."
+          },
+          {
+            "question": "Can an MRL elevator be installed in an existing building?",
+            "answer": "It depends on the existing shaft, overhead, pit, and structural conditions. Revotek can assess the building and recommend whether an MRL solution is suitable."
+          }
+        ],
+        "assets_bannerImage": {
+          "src": "/assets/services/mrl-elevator.webp",
+          "alt": "Machine Room Less MRL elevator system installed by Revotek Elevators"
+        },
+        "cta": {
+          "label": "Get an MRL Elevator Quote",
+          "href": "/contact"
+        }
+      },
+      {
+        "slug": "hospital-elevators",
+        "title": "Hospital Elevators",
+        "shortDescription": "Purpose-built hospital elevators designed for smooth, safe, and efficient movement of patients, staff, and medical equipment.",
+        "metaTitle": "Hospital Elevators in Ahmedabad | Revotek Elevators",
+        "metaDescription": "Hospital elevator installation in Ahmedabad and Gujarat for patient, stretcher, staff, and medical equipment movement with smooth operation and safety-focused design.",
+        "keywords": [
+          "hospital elevator Ahmedabad",
+          "hospital lift Gujarat",
+          "stretcher lift Ahmedabad",
+          "hospital elevator installation Gujarat",
+          "patient elevator Ahmedabad"
+        ],
+        "hero": {
+          "badgeTitle": "Hospital Elevators",
+          "heading": "Safe & Reliable Hospital Elevators",
+          "description": "Revotek Elevators provides hospital elevator solutions designed for hospitals, clinics, and healthcare facilities across Gujarat. Our systems prioritize smooth movement, suitable cabin dimensions, reliable operation, and safety for patients, attendants, medical staff, and equipment."
+        },
+        "overview": "Hospital elevators have specific operational requirements because they may transport patients on stretchers, medical equipment, staff, and visitors throughout the day. Revotek plans hospital elevator systems around traffic patterns, cabin size, accessibility, smooth ride requirements, door operation, and building configuration to support dependable healthcare mobility.",
+        "process": [
+          {
+            "title": "Healthcare Facility Assessment",
+            "description": "Evaluation of building layout, floor levels, traffic requirements, stretcher movement, equipment transportation, and available shaft space."
+          },
+          {
+            "title": "Capacity & Cabin Planning",
+            "description": "Selection of suitable cabin dimensions, capacity, door configuration, and elevator speed based on patient and equipment movement requirements."
+          },
+          {
+            "title": "Customized Interior & Accessibility Planning",
+            "description": "Planning of durable cabin finishes, controls, handrails, lighting, and accessibility-focused features according to project requirements."
+          },
+          {
+            "title": "Professional Installation",
+            "description": "Installation of elevator equipment, cabin, doors, controls, and safety systems by trained technicians."
+          },
+          {
+            "title": "Smooth Ride & Safety Testing",
+            "description": "Testing of ride quality, door operation, controls, emergency systems, and safety devices before commissioning."
+          },
+          {
+            "title": "Commissioning & Handover",
+            "description": "Final inspection, documentation, operational guidance, and handover for hospital management and facility teams."
+          }
+        ],
+        "features": [
+          "Suitable for patient and stretcher transportation",
+          "Cabins designed for medical equipment movement",
+          "Smooth and controlled elevator operation",
+          "Durable and easy-to-maintain cabin options",
+          "Reliable safety and emergency systems"
+        ],
+        "benefits": [
+          "Efficient vertical transportation for healthcare facilities",
+          "Improved accessibility for patients and visitors",
+          "Suitable cabin space for stretchers and medical equipment",
+          "Reliable operation for high-use environments",
+          "Professional installation and ongoing maintenance support"
+        ],
+        "faqs": [
+          {
+            "question": "What is a hospital elevator used for?",
+            "answer": "Hospital elevators are designed to support the movement of patients, stretchers, medical equipment, healthcare staff, attendants, and visitors between different floors."
+          },
+          {
+            "question": "Can hospital elevators accommodate stretchers?",
+            "answer": "Yes. Hospital elevator cabins can be designed with suitable dimensions and door configurations to accommodate patient stretchers and required medical equipment."
+          },
+          {
+            "question": "Are hospital elevators suitable for heavy daily usage?",
+            "answer": "Yes. Hospital elevator systems can be configured for frequent daily operation based on the facility's traffic requirements and usage patterns."
+          },
+          {
+            "question": "Do you provide maintenance for hospital elevators?",
+            "answer": "Yes. Revotek provides preventive maintenance, repair, AMC, and technical support for elevator systems used in healthcare facilities."
+          }
+        ],
+        "assets_bannerImage": {
+          "src": "/assets/services/hospital-elevator.webp",
+          "alt": "Hospital elevator designed for patient and stretcher transportation by Revotek Elevators"
+        },
+        "cta": {
+          "label": "Discuss Your Hospital Elevator Requirement",
+          "href": "/contact"
+        }
+      },
+      {
+        "slug": "hydraulic-elevators",
+        "title": "Hydraulic Elevators",
+        "shortDescription": "Reliable hydraulic elevator systems for suitable low-rise residential, commercial, and industrial applications with robust lifting performance.",
+        "metaTitle": "Hydraulic Elevators in Ahmedabad | Revotek Elevators",
+        "metaDescription": "Hydraulic elevator solutions in Ahmedabad and Gujarat for suitable low-rise residential, commercial, and industrial applications with reliable lifting performance and safety systems.",
+        "keywords": [
+          "hydraulic elevator Ahmedabad",
+          "hydraulic lift Gujarat",
+          "hydraulic elevator installation Ahmedabad",
+          "hydraulic lift company Gujarat",
+          "hydraulic passenger elevator Ahmedabad"
+        ],
+        "hero": {
+          "badgeTitle": "Hydraulic Elevators",
+          "heading": "Reliable Hydraulic Elevators for Suitable Building Applications",
+          "description": "Revotek Elevators provides hydraulic elevator solutions for suitable residential, commercial, and industrial applications across Gujarat. Our team evaluates building height, load requirements, available space, and usage patterns to recommend an appropriate hydraulic elevator configuration."
+        },
+        "overview": "Hydraulic elevators use hydraulic power to move the elevator car and can be suitable for certain low-rise buildings and heavy-load applications. Revotek provides customized hydraulic elevator solutions based on load capacity, travel height, building structure, available pit and equipment space, and operational requirements.",
+        "process": [
+          {
+            "title": "Application & Site Assessment",
+            "description": "Evaluation of building height, load requirements, pit conditions, available space, and intended elevator usage to determine hydraulic system suitability."
+          },
+          {
+            "title": "Capacity & Configuration Planning",
+            "description": "Selection of appropriate hydraulic equipment, cabin size, capacity, travel height, doors, and control system."
+          },
+          {
+            "title": "System & Component Selection",
+            "description": "Selection of hydraulic power unit, cylinder, controller, cabin, doors, and required safety components."
+          },
+          {
+            "title": "Professional Installation",
+            "description": "Installation of hydraulic and elevator components with proper alignment, connections, controls, and safety integration."
+          },
+          {
+            "title": "Pressure & Performance Testing",
+            "description": "Testing of hydraulic pressure, lifting performance, cabin movement, doors, controls, and safety systems."
+          },
+          {
+            "title": "Commissioning & Handover",
+            "description": "Final operational validation, documentation, safety guidance, and handover after successful testing."
+          }
+        ],
+        "features": [
+          "Hydraulic lifting technology for suitable applications",
+          "Configurations for passenger and heavy-load requirements",
+          "Robust construction and dependable operation",
+          "Customized cabin and door options",
+          "Professional installation and maintenance support"
+        ],
+        "benefits": [
+          "Suitable solution for selected low-rise applications",
+          "Can handle substantial load requirements in suitable configurations",
+          "Flexible installation options based on building structure",
+          "Reliable operation with appropriate maintenance",
+          "Customized system based on building and usage requirements"
+        ],
+        "faqs": [
+          {
+            "question": "What is a hydraulic elevator?",
+            "answer": "A hydraulic elevator uses a hydraulic power system and cylinder to move the elevator car. It can be suitable for certain low-rise buildings and applications requiring substantial lifting capacity."
+          },
+          {
+            "question": "Where are hydraulic elevators commonly used?",
+            "answer": "Hydraulic elevators can be used in suitable low-rise residential, commercial, industrial, and other buildings where their configuration matches the project's requirements."
+          },
+          {
+            "question": "Are hydraulic elevators suitable for heavy loads?",
+            "answer": "Hydraulic elevator systems can be configured for substantial loads. The appropriate capacity depends on the building, application, equipment selection, and project requirements."
+          },
+          {
+            "question": "How do I know if a hydraulic elevator is suitable for my building?",
+            "answer": "A site assessment is required. Revotek evaluates building height, load requirements, pit and equipment space, usage, and structural conditions before recommending a hydraulic solution."
+          }
+        ],
+        "assets_bannerImage": {
+          "src": "/assets/services/hydraulic-elevator.webp",
+          "alt": "Hydraulic elevator system installed by Revotek Elevators"
+        },
+        "cta": {
+          "label": "Discuss Hydraulic Elevator Requirements",
+          "href": "/contact"
+        }
+      },
+      {
+        "slug": "goods-elevators",
+        "title": "Goods Elevators",
+        "shortDescription": "Heavy-duty goods elevators designed for safe and efficient movement of materials, products, equipment, and commercial loads.",
+        "metaTitle": "Goods Elevators in Ahmedabad | Revotek Elevators",
+        "metaDescription": "Heavy-duty goods elevator installation in Ahmedabad and Gujarat for warehouses, factories, commercial buildings, and industrial facilities. Reliable material lifting solutions.",
+        "keywords": [
+          "goods elevator Ahmedabad",
+          "goods lift Gujarat",
+          "industrial goods elevator Ahmedabad",
+          "material lift Gujarat",
+          "goods lift installation Ahmedabad"
+        ],
+        "hero": {
+          "badgeTitle": "Goods Elevators",
+          "heading": "Heavy-Duty Goods Elevators for Industrial & Commercial Use",
+          "description": "Revotek Elevators provides goods elevator solutions for warehouses, factories, commercial buildings, workshops, and industrial facilities across Gujarat. Our systems are designed around load requirements, material handling needs, travel height, and building configuration."
+        },
+        "overview": "Goods elevators are designed to move materials, products, equipment, and other loads between different floors efficiently. Revotek provides customized goods elevator systems for industrial and commercial applications, with careful consideration of load capacity, platform or cabin size, loading methods, frequency of use, and building structure.",
+        "process": [
+          {
+            "title": "Load & Application Assessment",
+            "description": "Evaluation of the materials being transported, maximum load, dimensions, usage frequency, floor levels, and loading requirements."
+          },
+          {
+            "title": "Capacity & Cabin Planning",
+            "description": "Selection of suitable capacity, cabin or platform dimensions, door configuration, speed, and control system based on the application."
+          },
+          {
+            "title": "Structural & Technical Planning",
+            "description": "Planning of shaft, pit, overhead, landing access, lifting system, and safety arrangements for the proposed goods elevator."
+          },
+          {
+            "title": "Equipment Installation",
+            "description": "Professional installation of the lifting system, cabin or platform, doors, controls, rails, and safety components."
+          },
+          {
+            "title": "Load & Safety Testing",
+            "description": "Testing of lifting performance, load handling, movement, doors, controls, emergency functions, and safety systems."
+          },
+          {
+            "title": "Commissioning & Operator Guidance",
+            "description": "Final commissioning with operating procedures, safety instructions, documentation, and guidance for authorized operators."
+          }
+        ],
+        "features": [
+          "Heavy-duty configurations for material movement",
+          "Customized load capacity and cabin dimensions",
+          "Suitable for warehouses, factories, and commercial buildings",
+          "Robust components for demanding applications",
+          "Safety-focused controls and operating systems"
+        ],
+        "benefits": [
+          "Faster and more efficient movement of goods between floors",
+          "Reduced manual material handling",
+          "Customized capacity for different industrial requirements",
+          "Suitable for frequent commercial and industrial use",
+          "Professional installation, repair, and maintenance support"
+        ],
+        "faqs": [
+          {
+            "question": "What is a goods elevator used for?",
+            "answer": "A goods elevator is used to transport materials, products, equipment, inventory, and other commercial or industrial loads between different floors."
+          },
+          {
+            "question": "Where can goods elevators be installed?",
+            "answer": "Goods elevators can be used in warehouses, factories, workshops, commercial buildings, shopping facilities, storage areas, and other properties requiring vertical material movement."
+          },
+          {
+            "question": "Can the capacity of a goods elevator be customized?",
+            "answer": "Yes. Capacity, cabin dimensions, door configuration, and other specifications can be planned according to the load and building requirements."
+          },
+          {
+            "question": "Do goods elevators require regular maintenance?",
+            "answer": "Yes. Regular preventive maintenance is important for goods elevators because frequent load handling can increase wear on mechanical, electrical, and safety components."
+          }
+        ],
+        "assets_bannerImage": {
+          "src": "/assets/services/goods-elevator.webp",
+          "alt": "Heavy-duty goods elevator for industrial material movement by Revotek Elevators"
+        },
+        "cta": {
+          "label": "Get a Goods Elevator Quote",
           "href": "/contact"
         }
       }
