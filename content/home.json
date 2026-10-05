@@ -3,7 +3,7 @@
     "hero": {
       "badgeTitle": "Welcome to Revotek Elevators",
       "assets_bannerImage": {
-        "src": "/assets/home/homebanner.webp",
+        "src": "/assets/home/landing-hero.webp",
         "alt": "home page banner"
       },
       "heading": "Your Trusted Partner in Elevator Services & Maintenance",

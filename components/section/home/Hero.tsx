@@ -27,6 +27,7 @@ export const Hero: React.FC = () => {
         alt=""
         aria-hidden="true"
         role="presentation"
+        loading="eager"
         priority
         fill
         sizes="100vw"

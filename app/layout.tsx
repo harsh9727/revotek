@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 
 // components
 import { Header, Footer } from "@/components/layout";
-import { ScrollToTopButton } from "@/components/common";
+import { ScrollToTopButton, WhatsAppButton } from "@/components/common";
 
 export const metadata: Metadata = rootMetadata;
 
@@ -90,6 +90,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <WhatsAppButton />
         <ScrollToTopButton />
       </body>
     </html>
