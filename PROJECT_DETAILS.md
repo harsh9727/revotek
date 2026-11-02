@@ -173,7 +173,7 @@ revotek-new/
 │   ├── utils.ts                       # ClassName merging helper (clsx + tailwind-merge)
 │   ├── indexing/indexnow.ts           # IndexNow API ping implementation
 │   ├── og/OgTemplate.tsx              # JSX template for OpenGraph image generation
-│   ├── seo/                           # Metadata builders (Page, Blog, Listing, Product)
+│   ├── seo/                           # Page metadata builder (buildPageMetadata.ts)
 │   └── structured-data/               # JSON-LD Schema generators (Organization, WebPage, FAQ, etc.)
 ├── public/                            # Static public web assets
 │   ├── assets/                        # Optimized WebP images, logos, and product brochure PDF

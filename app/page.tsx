@@ -7,12 +7,12 @@ import { homePageContent } from "@/content/home.json";
 import {
   AboutPreview,
   ContactBanner,
+  FAQs,
   Hero,
   IndustriesWeServe,
   ServicesOverview,
   WhyChooseUs,
 } from "@/components/section/home";
-import { FAQs } from "@/components/section/home/FAQs";
 
 export const dynamic = "force-static";
 
@@ -37,6 +37,7 @@ const Home: React.FC = () => {
     isSectionOnly: true,
     items: homePageContent.faq.items,
   });
+
   return (
     <>
       <SchemaScript schema={webPageSchema} />

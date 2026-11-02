@@ -8,14 +8,9 @@ import {
 } from "@/seo-configs/baseInfo";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// BUILD PAGE METADATA — static pages
-// Use this for every non-dynamic page:
-//   /about, /contact, /services, /faq, /privacy-policy, etc.
-//
-// For dynamic pages use the dedicated builders:
-//   buildBlogMetadata    → app/blog/[slug]/page.tsx
-//   buildProductMetadata → app/products/[slug]/page.tsx
-//   buildListingMetadata → app/blog/page.tsx, app/products/page.tsx
+// BUILD PAGE METADATA — static and dynamic pages
+// Use this for pages:
+//   /about, /contact, /services, /services/[slug], etc.
 //
 // USAGE:
 //   import { buildPageMetadata } from "@/lib/seo/buildPageMetadata";
@@ -54,7 +49,7 @@ export interface PageMetadataInput {
   canonicalUrl?: string;
 
   // Open Graph type
-  // "website" for most pages — use "article" only for blog posts
+  // "website" for standard pages
   ogType?: "website" | "article";
 
   // Locale override — defaults to baseInfo.locale
@@ -158,55 +153,3 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
     },
   };
 }
-
-// ─────────────────────────────────────────────────────────────────────────────
-// USAGE EXAMPLES
-// ─────────────────────────────────────────────────────────────────────────────
-//
-// ── Static export (most common) ───────────────────────────────────────────────
-//
-// app/about/page.tsx
-//
-// import { buildPageMetadata } from "@/lib/seo/buildPageMetadata";
-//
-// export const metadata = buildPageMetadata({
-//   title: "About Us",
-//   description: "Learn about our mission, team, and the values that drive us.",
-//   path: "/about",
-//   keywords: ["about us", "our team", "company mission"],
-// });
-//
-// ─────────────────────────────────────────────────────────────────────────────
-//
-// ── Contact page ──────────────────────────────────────────────────────────────
-//
-// export const metadata = buildPageMetadata({
-//   title: "Contact Us",
-//   description: "Get in touch with our team. We respond within 24 hours.",
-//   path: "/contact",
-//   keywords: ["contact", "get in touch", "support"],
-// });
-//
-// ─────────────────────────────────────────────────────────────────────────────
-//
-// ── Noindexed page ────────────────────────────────────────────────────────────
-// Use for thank-you pages, search results, paginated pages beyond page 2
-//
-// export const metadata = buildPageMetadata({
-//   title: "Thank You",
-//   description: "Thank you for your message. We'll be in touch shortly.",
-//   path: "/thank-you",
-//   noIndex: true,
-// });
-//
-// ─────────────────────────────────────────────────────────────────────────────
-//
-// ── Page with custom canonical ────────────────────────────────────────────────
-// Use when this page's content also lives at another URL
-//
-// export const metadata = buildPageMetadata({
-//   title: "Web Design Services",
-//   description: "Professional web design services for businesses of all sizes.",
-//   path: "/services/web-design",
-//   canonicalUrl: "https://www.yoursite.com/services/web-design",
-// });

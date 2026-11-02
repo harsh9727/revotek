@@ -47,35 +47,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
-        {/* ── DNS Prefetch ─────────────────────────────────────────────────
-            Resolves DNS for external domains before the browser needs them
-            Add every third-party domain your site loads resources from
-            Reduces connection latency — measurable LCP improvement        */}
-        {/* <link rel="dns-prefetch" href="//fonts.googleapis.com" /> */}
-        {/* <link rel="dns-prefetch" href="//cdn.yourdomain.com" />   */}
-
-        {/* ── Preconnect ───────────────────────────────────────────────────
-            Full TCP + TLS handshake ahead of time — stronger than prefetch
-            Only use for origins you are CERTAIN will be needed on load
-            Max 2-3 preconnects — too many wastes bandwidth              */}
-        {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> */}
-
-        {/* ── LLM Discovery ────────────────────────────────────────────────
-            Points AI crawlers to your llms.txt file
-            Emerging standard — like robots.txt but for LLMs             */}
+        {/* LLM Discovery */}
         <link
           rel="llms"
           type="text/plain"
           href="/llms.txt"
           title="LLM-readable site index"
         />
-
-        {/* ── Verification Files ────────────────────────────────────────────
-            Alternative to meta tags — place files in /public/ instead
-            BingSiteAuth.xml → Bing Webmaster Tools verification
-            Both methods work — choose one per platform                  */}
-        {/* <meta name="msvalidate.01" content="<BING_TOKEN>" />      */}
-        {/* <meta name="yandex-verification" content="<YANDEX_TOKEN>" /> */}
       </head>
 
       <body>

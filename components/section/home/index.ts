@@ -5,4 +5,3 @@ export * from "./ServicesOverview";
 export * from "./IndustriesWeServe";
 export * from "./FAQs";
 export * from "./ContactBanner";
-export * from "./ContactBanner"
