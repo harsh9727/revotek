@@ -115,7 +115,7 @@ export const rootStructuredData = {
       },
       image: baseInfo.ogImage,
       description: baseInfo.description,
-      telephone: baseInfo.phones[2].label,
+      telephone: baseInfo.phones?.[1]?.label ?? baseInfo.phones?.[0]?.label ?? "",
       email: baseInfo.emails.primary,
       address: {
         "@type": "PostalAddress",

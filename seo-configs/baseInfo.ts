@@ -17,24 +17,17 @@ export const baseInfo = {
     "Your trusted partner for professional elevator installation, maintenance, repair, and modernization services. Serving residential, commercial, and industrial clients across India.",
 
   emails: {
-    primary: "info@revotekelevators.com",
-    secondary: "revotekservices@gmail.com",
+    primary: "revotekservices@gmail.com",
   },
   phones: [
     {
-      area: "Gandhinagar",
-      name: "Sunil Vadan",
-      label: "+91 84012 54119",
-      href: "tel:+918401254119",
+      area: "Gujarat",
+      name: "Harsh Jambekar",
+      label: "+91 98981 82761",
+      href: "tel:+919898182761",
     },
     {
-      area: "New Ahmedabad",
-      name: "Dhruv Patel",
-      label: "+91 85113 76037",
-      href: "tel:+918511376037",
-    },
-    {
-      area: "Old Ahmedabad",
+      area: "Gujarat",
       name: "Dilip Varlekar",
       label: "+91 92659 99898",
       href: "tel:+919265999898",
