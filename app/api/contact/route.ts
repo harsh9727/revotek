@@ -17,7 +17,7 @@ const contactSchema = z.object({
   message: z.string().min(10),
 });
 
-// Escape user input before inserting it into HTML
+// Escape HTML to safely display customer input
 function escapeHtml(value: string) {
   return value.replace(/[&<>"']/g, (char) => {
     const entities: Record<string, string> = {
@@ -33,15 +33,22 @@ function escapeHtml(value: string) {
 }
 
 export async function POST(req: Request) {
+  console.log("REVOTEK CONTACT API CALLED");
+
   try {
-    // 1. Validate request body
+    console.log("CONTACT API PROCESS STARTED");
+
+    // 1. Read and validate form data
     const body = await req.json();
     const validatedData = contactSchema.parse(body);
+
+    console.log("CONTACT FORM DATA RECEIVED");
 
     // 2. Check required environment variables
     const requiredEnv = [
       "SMTP_HOST",
       "SMTP_PORT",
+      "SMTP_SECURE",
       "SMTP_USER",
       "SMTP_PASS",
       "SMTP_FROM_EMAIL",
@@ -53,7 +60,10 @@ export async function POST(req: Request) {
     );
 
     if (missingEnv.length > 0) {
-      console.error("Missing SMTP environment variables:", missingEnv);
+      console.error(
+        "Missing SMTP environment variables:",
+        missingEnv
+      );
 
       return NextResponse.json(
         {
@@ -64,7 +74,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // 3. Create SMTP transporter
+    // 3. Create Gmail SMTP transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -78,12 +88,14 @@ export async function POST(req: Request) {
       socketTimeout: 20000,
     });
 
+    console.log("VERIFYING SMTP CONNECTION...");
+
     // 4. Verify SMTP connection and authentication
     await transporter.verify();
 
     console.log("SMTP connection verified successfully.");
 
-    // 5. Prepare email content
+    // 5. Escape customer data for HTML email
     const name = escapeHtml(validatedData.name);
     const phone = escapeHtml(validatedData.phone);
     const email = escapeHtml(validatedData.email || "N/A");
@@ -94,16 +106,20 @@ export async function POST(req: Request) {
     const passengerCapacity = escapeHtml(
       validatedData.passengerCapacity
     );
+
     const message = escapeHtml(validatedData.message).replace(
       /\r?\n/g,
       "<br/>"
     );
 
+    // 6. Prepare email
     const mailOptions = {
       from: process.env.SMTP_FROM_EMAIL,
       to: process.env.CONTACT_EMAIL,
       replyTo: validatedData.email || undefined,
+
       subject: `New Contact Form Submission - ${validatedData.name.replace(/[\r\n]/g, " ")}`,
+
       html: `
         <h2>New Contact Inquiry</h2>
 
@@ -126,10 +142,12 @@ export async function POST(req: Request) {
       `,
     };
 
-    // 6. Send email
+    console.log("SENDING CONTACT EMAIL...");
+
+    // 7. Send email
     const info = await transporter.sendMail(mailOptions);
 
-    console.log("Contact email sent successfully:", {
+    console.log("CONTACT EMAIL SENT SUCCESSFULLY:", {
       messageId: info.messageId,
       accepted: info.accepted,
       rejected: info.rejected,
@@ -142,8 +160,9 @@ export async function POST(req: Request) {
       },
       { status: 200 }
     );
+
   } catch (error) {
-    console.error("Contact API Error:", error);
+    console.error("REVOTEK CONTACT API ERROR:", error);
 
     return NextResponse.json(
       {
