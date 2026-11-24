@@ -47,7 +47,7 @@ export const baseInfo = {
   },
 
   logo: `${baseUrl}/assets/logo.webp`,
-  ogImage: `${baseUrl}/opengraph-image.png`,
+  ogImage: `${baseUrl}/opengraph-image`,
 
   geo: {
     latitude: "22.9782641",
@@ -91,10 +91,12 @@ export const buildCanonical = (path: string = ""): string => {
   return `${baseUrl}${clean === "/" ? "" : clean}`;
 };
 
-// OG image absolute URL builder — for dynamic OG image routes
-export const buildOgImageUrl = (path: string = ""): string => {
-  const clean = path.startsWith("/") ? path : `/${path}`;
-  return `${baseUrl}${clean}/opengraph-image`;
+// OG image absolute URL builder — points to dynamic root /opengraph-image
+export const buildOgImageUrl = (path?: string): string => {
+  if (path && path.endsWith(".png")) {
+    return `${baseUrl}/${path.replace(/^\/+/, "")}`;
+  }
+  return `${baseUrl}/opengraph-image`;
 };
 
 // Page title builder — applies the template: "Page Name | Brand"

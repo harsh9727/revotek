@@ -85,7 +85,7 @@ export const rootMetadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
 
-  manifest: "/manifest.json",
+  manifest: "/manifest.webmanifest",
 
   verification: {
     google: "MLlqy7RymXYeSE0a9ZQh4wXjlHwUhnzWm_7MxtAGCr4",

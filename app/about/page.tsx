@@ -18,7 +18,7 @@ export const metadata: Metadata = buildPageMetadata({
   
   // edit this 
   description:
-    "Learn about Revotek Elevators — a professional elevator installation, maintenance, and repair company based in Gujarat, Gujarat. Serving residential, commercial, and industrial clients across India.",
+    "Learn about Revotek Elevators — a professional elevator installation, maintenance, and repair company based in Ahmedabad, Gujarat. Serving residential, commercial, and industrial clients across India.",
   path: "/about",
   keywords: [
     "elevator company Gujarat",
