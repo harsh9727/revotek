@@ -407,7 +407,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       <!-- Hero Announcement -->
       <div class="hero-banner">
         <h1 class="hero-title">New Elevator Project Inquiry</h1>
-        <p class="hero-sub">Submitted via the contact form on revotekelevators.com</p>
+        <p class="hero-sub">Submitted via the contact form on www.revotekelevators.com</p>
       </div>
 
       <!-- Main Content -->
