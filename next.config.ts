@@ -38,15 +38,6 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/_next/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
         source: "/(.*)\\.(ico|png|jpg|jpeg|webp|avif|svg|woff2|woff|ttf)",
         headers: [
           {
@@ -80,8 +71,6 @@ const nextConfig: NextConfig = {
   },
 
   experimental: {
-    optimizeCss: true,
-
     optimizePackageImports: [],
 
     // ppr: true,
