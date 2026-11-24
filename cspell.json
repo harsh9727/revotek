@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Figtree",
+    "Hugeicons",
+    "IndexNow",
+    "indexnow",
+    "INDEXNOW",
+    "Kolkata",
+    "ratelimit",
+    "Resend",
+    "Revotek",
+    "revotekelevators",
+    "revotekservices",
+    "Segoe",
+    "Turbopack",
+    "Upstash"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    ".next",
+    "pnpm-lock.yaml",
+    ".git"
+  ]
+}

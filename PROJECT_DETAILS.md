@@ -21,7 +21,7 @@ A high-performance, SEO-first, production-grade web application built for **Revo
 
 ### 1.1 Business Identity
 - **Company**: Revotek Elevators
-- **Headquarters**: Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC, Ahmedabad, Gujarat 382445, India
+- **Headquarters**:127, Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC, Ahmedabad, Gujarat 382445, India
 - **Primary Business**: Commercial, residential, hospital, and industrial vertical mobility solutions — including new elevator installations, periodic preventive maintenance, emergency repairs, modernization, Annual Maintenance Contracts (AMC), and OEM spare parts supply.
 - **Contact Details**:
   - **Email**: `revotekservices@gmail.com`

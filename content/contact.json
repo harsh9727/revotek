@@ -45,6 +45,20 @@
             }
           }
         },
+        "siteAddress": {
+          "label": "Site Address / Project Location",
+          "placeholder": "Enter complete site address (e.g., Building name, Street, Area, City)",
+          "required": true,
+          "validation": {
+            "minLength": 5,
+            "maxLength": 300,
+            "messages": {
+              "required": "Please enter the site/customer address.",
+              "minLength": "Site address must be at least 5 characters.",
+              "maxLength": "Site address cannot exceed 300 characters."
+            }
+          }
+        },
         "message": {
           "label": "How Can We Help?",
           "placeholder": "Tell us about your elevator requirements — service type, building type, location, or any specific concerns.",

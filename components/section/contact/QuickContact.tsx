@@ -1,9 +1,6 @@
 import { contactPageContent } from "@/content/contact.json";
 import { baseInfo } from "@/seo-configs/baseInfo";
-import {
-  WhatsappBusinessFreeIcons,
-  WhatsappFreeIcons,
-} from "@hugeicons/core-free-icons";
+import { WhatsappFreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 

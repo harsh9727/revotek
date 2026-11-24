@@ -38,6 +38,12 @@ const contactSchema = z.object({
     .or(z.literal(""))
     .optional(),
 
+  siteAddress: z
+    .string()
+    .trim()
+    .min(5, "Site address must be at least 5 characters.")
+    .max(300, "Site address cannot exceed 300 characters."),
+
   elevatorName: z
     .string()
     .trim()
@@ -178,6 +184,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       name: escapeHtml(validatedData.name),
       phone: escapeHtml(validatedData.phone),
       email: validatedData.email ? escapeHtml(validatedData.email) : "Not Provided",
+      siteAddress: escapeHtml(validatedData.siteAddress),
       elevatorName: escapeHtml(validatedData.elevatorName),
       elevatorCount: escapeHtml(validatedData.elevatorCount),
       basementCount: escapeHtml(validatedData.basementCount),
@@ -192,83 +199,325 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       timeStyle: "medium",
     });
 
-    const emailHtml = `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <style>
-          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; color: #1e293b; }
-          .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
-          .header { background: #0b92c3; padding: 24px 32px; color: #ffffff; }
-          .header h1 { margin: 0; font-size: 20px; font-weight: 700; }
-          .header p { margin: 4px 0 0 0; font-size: 13px; opacity: 0.9; }
-          .content { padding: 32px; }
-          .section-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #0b92c3; margin: 24px 0 12px 0; border-bottom: 2px solid #f1f5f9; padding-bottom: 6px; }
-          .section-title:first-child { margin-top: 0; }
-          .field-row { display: flex; margin-bottom: 10px; font-size: 14px; line-height: 1.5; }
-          .field-label { width: 180px; font-weight: 600; color: #64748b; flex-shrink: 0; }
-          .field-value { color: #0f172a; font-weight: 500; word-break: break-word; }
-          .message-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-top: 8px; font-size: 14px; line-height: 1.6; color: #334155; }
-          .footer { background: #f1f5f9; padding: 16px 32px; font-size: 12px; color: #64748b; text-align: center; }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <h1>New Website Contact Inquiry</h1>
-            <p>Revotek Elevators Website Form Submission</p>
-          </div>
-          <div class="content">
-            <div class="section-title">Client Contact Details</div>
-            <div class="field-row">
-              <div class="field-label">Full Name:</div>
-              <div class="field-value"><strong>${escaped.name}</strong></div>
-            </div>
-            <div class="field-row">
-              <div class="field-label">Phone Number:</div>
-              <div class="field-value"><a href="tel:+91${escaped.phone}" style="color: #0b92c3; text-decoration: none; font-weight: 600;">+91 ${escaped.phone}</a></div>
-            </div>
-            <div class="field-row">
-              <div class="field-label">Email Address:</div>
-              <div class="field-value">${validatedData.email ? `<a href="mailto:${escaped.email}" style="color: #0b92c3; text-decoration: none;">${escaped.email}</a>` : "<em>Not Provided</em>"}</div>
-            </div>
+    const siteUrl = (
+      process.env.NEXT_PUBLIC_SITE_URL || "https://revotekelevators.com"
+    ).replace(/\/$/, "");
+    const logoUrl = `${siteUrl}/assets/logo.png`;
 
-            <div class="section-title">Elevator Project Specifications</div>
-            <div class="field-row">
-              <div class="field-label">Elevator Name / Model:</div>
-              <div class="field-value">${escaped.elevatorName}</div>
-            </div>
-            <div class="field-row">
-              <div class="field-label">Number of Elevators:</div>
-              <div class="field-value">${escaped.elevatorCount}</div>
-            </div>
-            <div class="field-row">
-              <div class="field-label">Number of Basements:</div>
-              <div class="field-value">${escaped.basementCount}</div>
-            </div>
-            <div class="field-row">
-              <div class="field-label">Number of Floors:</div>
-              <div class="field-value">${escaped.floorCount}</div>
-            </div>
-            <div class="field-row">
-              <div class="field-label">Passenger Capacity:</div>
-              <div class="field-value">${escaped.passengerCapacity} Persons</div>
-            </div>
+    const emailHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Elevator Inquiry</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    img {
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      display: block;
+    }
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f1f5f9;
+      padding: 32px 16px;
+    }
+    .main-card {
+      max-width: 620px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(11, 146, 195, 0.08);
+    }
+    .top-brand-band {
+      background: linear-gradient(135deg, #0b92c3 0%, #0284c7 100%);
+      height: 6px;
+    }
+    .header {
+      background: #ffffff;
+      padding: 24px 32px 18px 32px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .header-table {
+      width: 100%;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #0b92c3;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      border: 1px solid #bae6fd;
+    }
+    .hero-banner {
+      background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+      padding: 20px 32px 16px 32px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .hero-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+    .hero-sub {
+      margin: 4px 0 0 0;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .content {
+      padding: 24px 32px 32px 32px;
+    }
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0b92c3;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0;
+    }
+    .spec-grid {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 6px 16px;
+      margin-top: 8px;
+    }
+    .data-table {
+      width: 100%;
+    }
+    .data-row td {
+      padding: 9px 0;
+      font-size: 14px;
+      vertical-align: top;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .data-row:last-child td {
+      border-bottom: none;
+    }
+    .label-col {
+      width: 42%;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .value-col {
+      width: 58%;
+      color: #0f172a;
+      font-weight: 600;
+      text-align: right;
+    }
+    .message-card {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-left: 4px solid #0b92c3;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .cta-container {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px dashed #cbd5e1;
+      text-align: center;
+    }
+    .btn-call {
+      display: inline-block;
+      background: #0b92c3;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 8px;
+      margin: 4px 6px;
+    }
+    .btn-reply {
+      display: inline-block;
+      background: #0f172a;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 8px;
+      margin: 4px 6px;
+    }
+    .footer {
+      background-color: #f8fafc;
+      padding: 20px 32px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .footer a {
+      color: #0b92c3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main-card">
+      <!-- Brand Theme Color Top Bar -->
+      <div class="top-brand-band"></div>
 
-            <div class="section-title">Client Requirement / Message</div>
-            <div class="message-box">
-              ${escaped.message}
-            </div>
-          </div>
-          <div class="footer">
-            Submitted on ${submissionTime} (IST)<br/>
-            ${validatedData.email ? "Direct reply enabled: Click 'Reply' in your email client to respond to the client." : "Note: Client did not provide an email address. Use the phone number above to respond."}
-          </div>
+      <!-- Header with Revotek Logo -->
+      <div class="header">
+        <table class="header-table" role="presentation">
+          <tr>
+            <td style="vertical-align: middle;">
+              <a href="${siteUrl}" target="_blank" style="text-decoration: none; display: inline-block;">
+                <img src="${logoUrl}" alt="Revotek Elevators" width="140" style="max-width: 140px; height: auto; display: block; border: 0;" />
+              </a>
+            </td>
+            <td style="text-align: right; vertical-align: middle;">
+              <span class="badge">Website Inquiry</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Hero Announcement -->
+      <div class="hero-banner">
+        <h1 class="hero-title">New Elevator Project Inquiry</h1>
+        <p class="hero-sub">Submitted via the contact form on revotekelevators.com</p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <!-- Client Details Section -->
+        <table style="width: 100%; margin-bottom: 4px;" role="presentation">
+          <tr>
+            <td style="border-bottom: 2px solid #e0f2fe; padding-bottom: 6px;">
+              <span class="section-title">Client Contact Details</span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="spec-grid" style="margin-bottom: 20px;">
+          <table class="data-table" role="presentation">
+            <tr class="data-row">
+              <td class="label-col">Client Name</td>
+              <td class="value-col">${escaped.name}</td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Phone Number</td>
+              <td class="value-col">
+                <a href="tel:+91${escaped.phone}" style="color: #0b92c3; text-decoration: none; font-weight: 700;">+91 ${escaped.phone}</a>
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Email Address</td>
+              <td class="value-col">
+                ${validatedData.email
+        ? `<a href="mailto:${escaped.email}" style="color: #0b92c3; text-decoration: none;">${escaped.email}</a>`
+        : '<span style="color: #94a3b8; font-style: italic; font-weight: normal;">Not Provided</span>'
+      }
+              </td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Site / Customer Address</td>
+              <td class="value-col">${escaped.siteAddress}</td>
+            </tr>
+          </table>
         </div>
-      </body>
-      </html>
-    `;
+
+        <!-- Project Specifications Section -->
+        <table style="width: 100%; margin-bottom: 4px;" role="presentation">
+          <tr>
+            <td style="border-bottom: 2px solid #e0f2fe; padding-bottom: 6px;">
+              <span class="section-title">Elevator Project Specifications</span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="spec-grid" style="margin-bottom: 20px;">
+          <table class="data-table" role="presentation">
+            <tr class="data-row">
+              <td class="label-col">Elevator Model / Type</td>
+              <td class="value-col">${escaped.elevatorName}</td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Number of Elevators</td>
+              <td class="value-col">${escaped.elevatorCount}</td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Number of Basements</td>
+              <td class="value-col">${escaped.basementCount}</td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Number of Floors</td>
+              <td class="value-col">${escaped.floorCount}</td>
+            </tr>
+            <tr class="data-row">
+              <td class="label-col">Passenger Capacity</td>
+              <td class="value-col">${escaped.passengerCapacity} Passangers</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Client Message Section -->
+        <table style="width: 100%; margin-bottom: 4px;" role="presentation">
+          <tr>
+            <td style="border-bottom: 2px solid #e0f2fe; padding-bottom: 6px;">
+              <span class="section-title">Client Requirement / Message</span>
+            </td>
+          </tr>
+        </table>
+        <div class="message-card">
+          ${escaped.message}
+        </div>
+
+        <!-- Call-to-Action Buttons -->
+        <div class="cta-container">
+          <a href="tel:+91${escaped.phone}" class="btn-call">Call Client +91 ${escaped.phone}</a>
+          ${validatedData.email
+        ? `<a href="mailto:${escaped.email}?subject=Regarding%20your%20Elevator%20Inquiry%20-%20Revotek%20Elevators" class="btn-reply">Reply via Email</a>`
+        : ""
+      }
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p style="margin: 0 0 6px 0; font-weight: 600; color: #334155;">Revotek Elevators</p>
+        <p style="margin: 0 0 10px 0; color: #64748b;">Quality &amp; Reliable Elevator Solutions | Ahmedabad, Gujarat</p>
+        <p style="margin: 0; font-size: 11px; color: #94a3b8;">
+          Submission Time: ${submissionTime} (IST)<br/>
+          This is an automated inquiry notification from <a href="${siteUrl}" target="_blank">www.revotekelevators.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>`;
 
     // 8. Dispatch Email via Resend
     const resend = new Resend(resendApiKey);

@@ -22,21 +22,22 @@ export const baseInfo = {
   phones: [
     {
       area: "Gujarat",
-      name: "Harsh Jambekar",
-      label: "+91 98981 82761",
-      href: "tel:+919898182761",
-    },
-    {
-      area: "Gujarat",
       name: "Dilip Varlekar",
       label: "+91 92659 99898",
       href: "tel:+919265999898",
     },
+    {
+      area: "Gujarat",
+      name: "Harsh Jambekar",
+      label: "+91 98981 82761",
+      href: "tel:+919898182761",
+    }
+
   ],
 
   address: {
     streetAddress:
-      "Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC",
+      "127, Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC",
     addressLocality: "Ahmedabad",
     addressRegion: "Gujarat",
     postalCode: "382445",

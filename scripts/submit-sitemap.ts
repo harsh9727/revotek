@@ -32,7 +32,6 @@
 
 // Load env from .env.local when running locally
 // In CI/CD, env vars are injected directly
-import { config } from "node:process";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL ?? "";
 const INDEXNOW_API_KEY = process.env.INDEXNOW_API_KEY ?? "";
@@ -75,7 +74,7 @@ async function fetchSitemap(sitemapUrl: string): Promise<string[]> {
   // Each nested sitemap needs to be fetched and parsed separately
   if (xml.includes("<sitemapindex")) {
     log.info("Detected sitemap index — fetching nested sitemaps...");
-    return fetchSitemapIndex(xml, sitemapUrl);
+    return fetchSitemapIndex(xml);
   }
 
   // ── Regular sitemap — extract <loc> URLs ──────────────────────────────────
@@ -86,10 +85,7 @@ async function fetchSitemap(sitemapUrl: string): Promise<string[]> {
 // fetchSitemapIndex
 // Handles sitemap index files — recursively fetches each child sitemap
 // ─────────────────────────────────────────────────────────────────────────────
-async function fetchSitemapIndex(
-  xml: string,
-  baseUrl: string,
-): Promise<string[]> {
+async function fetchSitemapIndex(xml: string): Promise<string[]> {
   // Extract nested sitemap URLs from index
   const sitemapMatches = xml.match(/<loc>(.*?)<\/loc>/g) ?? [];
   const sitemapUrls = sitemapMatches.map((match) =>

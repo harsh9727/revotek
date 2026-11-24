@@ -11,6 +11,7 @@ interface ContactFormData {
   name: string;
   phone: string;
   email: string;
+  siteAddress: string;
   elevatorName: string;
   elevatorCount: string;
   basementCount: string;
@@ -24,6 +25,7 @@ const initialFormData: ContactFormData = {
   name: "",
   phone: "",
   email: "",
+  siteAddress: "",
   elevatorName: "",
   elevatorCount: "",
   basementCount: "",
@@ -225,6 +227,35 @@ export const ContactForm: React.FC = () => {
               onChange={handleChange}
               disabled={isSubmitting}
             />
+          </div>
+
+          <div className="sm:col-span-2">
+            <div className="space-y-1.5">
+              <Label
+                htmlFor="siteAddress"
+                className="text-sm font-medium text-primary"
+              >
+                {fields.siteAddress?.label ?? "Site Address / Project Location"}
+                <span aria-hidden="true" className="ml-1 text-red-500">
+                  *
+                </span>
+              </Label>
+              <Input
+                id="siteAddress"
+                name="siteAddress"
+                type="text"
+                autoComplete="street-address"
+                required
+                aria-required="true"
+                placeholder={
+                  fields.siteAddress?.placeholder ??
+                  "Enter complete site address (e.g., Building name, Street, Area, City)"
+                }
+                value={formData.siteAddress}
+                onChange={handleChange}
+                disabled={isSubmitting}
+              />
+            </div>
           </div>
 
           <div className="sm:col-span-2">
