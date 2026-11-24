@@ -478,7 +478,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
             </tr>
             <tr class="data-row">
               <td class="label-col">Passenger Capacity</td>
-              <td class="value-col">${escaped.passengerCapacity} Passangers</td>
+              <td class="value-col">${escaped.passengerCapacity} Persons</td>
             </tr>
           </table>
         </div>

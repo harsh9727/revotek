@@ -47,5 +47,5 @@ For full architectural diagrams, security configurations, data flows, and specif
 
 - **Email**: `revotekservices@gmail.com`
 - **Phone**: +91 98981 82761 / +91 92659 99898
-- **Address**:127, Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC, Ahmedabad, Gujarat 382445, India
+- **Address**: 127, Shree Hari Darshan Industrial Park Rd, Phase IV, Vatva GIDC, Ahmedabad, Gujarat 382445, India
 - **Website**: https://www.revotekelevators.com

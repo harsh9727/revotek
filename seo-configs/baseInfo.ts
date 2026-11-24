@@ -105,7 +105,7 @@ export const buildTitle = (pageTitle?: string): string => {
   return `${pageTitle} | ${baseInfo.name}`;
 };
 
-// typesafe optional object builder
+// type-safe optional object builder
 export const optional = <T extends object>(
   condition: unknown,
   obj: T,
