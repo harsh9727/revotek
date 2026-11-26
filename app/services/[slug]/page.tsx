@@ -14,6 +14,9 @@ import {
 } from "@/components/section/services/details";
 
 export const dynamic = "force-static";
+// Only the slugs from generateStaticParams exist. Unknown slugs get the static
+// 404 page instead of an on-demand render (function call + ISR write).
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return servicesPageContent.services.map((service) => ({

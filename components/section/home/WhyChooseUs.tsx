@@ -28,7 +28,7 @@ export const WhyChooseUs: React.FC = () => {
           alt={whyChooseUs.assets_bannerImage.alt}
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, 500px"
+          sizes="(max-width: 1023px) 100vw, 600px"
           className="lg:w-150 lg:h-full object-cover w-full h-120 pt-15 lg:pt-0"
         />
       </motion.div>

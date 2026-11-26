@@ -69,9 +69,10 @@ export const Header: React.FC = () => {
         <Image
           src={data.logo}
           alt="Revotek logo"
-          width={0}
-          height={0}
-          sizes="100vw"
+          width={200}
+          height={150}
+          // 6 KB WebP source: serve as-is, no Vercel image transformation.
+          unoptimized
           priority
           className="h-20 w-auto"
         />

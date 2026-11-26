@@ -99,7 +99,7 @@ export const AboutPreview: React.FC = () => {
           src={aboutPreview.assets_bannerImage.src}
           alt={aboutPreview.assets_bannerImage.alt}
           fill
-          sizes="(max-width: 768px) 100vw, 500px"
+          sizes="(max-width: 1023px) 100vw, 500px"
           className="object-cover rounded-xl"
         />
       </motion.div>

@@ -5,7 +5,8 @@ import { baseInfo } from "@/seo-configs/baseInfo";
 export const alt = baseInfo.fullTitle;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const runtime = "edge";
+// No `runtime = "edge"`: on the default Node.js runtime this image is
+// prerendered once at build time instead of rendered on every request.
 
 export default async function Image() {
   return new ImageResponse(

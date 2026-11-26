@@ -78,6 +78,9 @@ export const ServicesOverview: React.FC = () => {
                     alt={service.assets_bannerImage.alt}
                     width={500}
                     height={400}
+                    // Sources are 350x250 WebP files (3-30 KB): serve as-is,
+                    // no Vercel image transformation.
+                    unoptimized
                     className="h-60 w-full object-cover rounded-lg"
                   />
 
